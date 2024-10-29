@@ -10,7 +10,9 @@ const OurPresence: React.FC = () => {
     setInvestmentCategoryIndex
   ] = useState(0);
 
-  const onInvestCategoryClick = (index) => {
+  const onInvestCategoryClick = (
+    index: number
+  ) => {
     setInvestmentCategoryIndex(index);
   };
 
@@ -52,7 +54,7 @@ const OurPresence: React.FC = () => {
                 ].description
               }
             </div>
-            <Button
+            {/* <Button
               variant="secondary"
               size="large"
               theme="dark"
@@ -65,7 +67,7 @@ const OurPresence: React.FC = () => {
               }}
             >
               Know more
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

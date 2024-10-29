@@ -11,10 +11,10 @@ const AboutUs: React.FC = () => {
         {HOME_CONFIG.ABOUT_US.TITLE}
       </div>
       <div className="flex flex-row justify-between">
-        <div className="text-[18px] font-[400] leading-[27px]">
+        <div className="text-[18px] font-[400] leading-[27px] w-[50%]">
           {HOME_CONFIG.ABOUT_US.DESCRIPTION1}
         </div>
-        <div className="text-[18px] font-[400] leading-[27px]">
+        <div className="text-[18px] font-[400] leading-[27px] w-[50%]">
           {HOME_CONFIG.ABOUT_US.DESCRIPTION2}
         </div>
       </div>

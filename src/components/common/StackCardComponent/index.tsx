@@ -16,7 +16,7 @@ const StackedCardComponent: React.FC<
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 400) {
+      if (window.scrollY >= 822) {
         setInViewport(true);
       }
     };
@@ -74,18 +74,38 @@ const StackedCardComponent: React.FC<
   }) => {
     const { year, title, subtitle, imgSrc } =
       card;
-    const [startAnimation, setStartAnimation] =
-      useState(false);
+    const [
+      startAnimationIndex,
+      setStartAnimationIndex
+    ] = useState(-1);
+
+    const [animatedIndices, setAnimatedIndices] =
+      useState<number[]>([]);
 
     useEffect(() => {
       let timer: any;
       if (inViewport) {
         timer = setTimeout(() => {
-          setStartAnimation(true);
-        }, index * 1000); // Delay the animation for each card by index * 1000ms
+          setStartAnimationIndex(index);
+          setAnimatedIndices((prev) => [
+            ...prev,
+            index
+          ]);
+        }, index * 3000); // Delay the animation for each card by index * 1000ms
       }
       return () => clearTimeout(timer);
-    }, [index]);
+    }, [index, inViewport]);
+
+    const calculateXPosition = () => {
+      // Calculate how many cards have moved, affecting the current card's left position
+      const shiftedCount = animatedIndices.filter(
+        (i) => i < index
+      ).length;
+      return -(
+        360 * (index - shiftedCount) +
+        18 * (index - shiftedCount)
+      );
+    };
 
     return (
       <motion.div
@@ -93,10 +113,14 @@ const StackedCardComponent: React.FC<
         initial={{ x: 0, y: 0 }} // Initial position in row
         animate={{
           // Move card to top-left (x and y) when the animation starts
-          x: startAnimation
-            ? -(360 * index + 18 * index)
-            : 0,
-          zIndex: startAnimation ? index + 1 : 0 // Stack from right to left
+          x:
+            startAnimationIndex === index
+              ? calculateXPosition()
+              : 0,
+          zIndex:
+            startAnimationIndex === index
+              ? index + 1
+              : 0 // Stack from right to left
         }}
         transition={{ duration: 0.5 }}
       >

@@ -7,17 +7,18 @@ import {
   FaChevronRight
 } from 'react-icons/fa';
 import ImageComponent from '../Image';
+import images from '~assets/image';
 
 interface CarouselProps {
-  images?: string[];
+  imagesList?: string[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({
-  images = [
-    '/src/assets/images/heroCarousel/1.png',
-    '/src/assets/images/heroCarousel/2.png',
-    '/src/assets/images/heroCarousel/3.png',
-    '/src/assets/images/heroCarousel/4.png'
+  imagesList = [
+    images.heroCarousel1,
+    images.heroCarousel2,
+    images.heroCarousel3,
+    images.heroCarousel4
   ]
 }) => {
   const [currentIndex, setCurrentIndex] =
@@ -27,14 +28,16 @@ const Carousel: React.FC<CarouselProps> = ({
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      if (!isHovered) {
-        setCurrentIndex(
-          (currentIndex + 1) % images.length
-        );
-      }
+      setCurrentIndex(
+        (currentIndex + 1) % imagesList.length
+      );
     }, 5000);
     return () => clearInterval(intervalId);
-  }, [currentIndex, isHovered, images.length]);
+  }, [
+    currentIndex,
+    isHovered,
+    imagesList.length
+  ]);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -46,14 +49,14 @@ const Carousel: React.FC<CarouselProps> = ({
 
   const handleLeftClick = () => {
     setCurrentIndex(
-      (currentIndex - 1 + images.length) %
-        images.length
+      (currentIndex - 1 + imagesList.length) %
+        imagesList.length
     );
   };
 
   const handleRightClick = () => {
     setCurrentIndex(
-      (currentIndex + 1) % images.length
+      (currentIndex + 1) % imagesList.length
     );
   };
 
@@ -70,18 +73,24 @@ const Carousel: React.FC<CarouselProps> = ({
             '0px 4px 4px 0px rgba(0, 0, 0, 1)'
         }}
       >
-        <div className="text-[80px] font-[400] leading-[96px] font-['Marcellus'] text-secondary400 w-[60%] text-center">
+        <div
+          className="text-[80px] font-[400] leading-[96px] font-['Marcellus'] text-secondary400 w-[60%] text-center"
+          style={{
+            textShadow:
+              '2px 2px 4px rgba(0, 0, 0, 0.5)'
+          }}
+        >
           Building Legacy, Investing in Excellence
         </div>
       </div>
       <div className="relative w-full h-full overflow-hidden">
-        {images.map((image, index) => (
+        {imagesList.map((image, index) => (
           <ImageComponent
             key={index}
             src={image}
             height="h-full"
             width="w-full"
-            className={`absolute top-0 left-0 object-cover transition-opacity duration-500 ${
+            className={`absolute top-0 left-0 object-cover transition-opacity duration-[1200ms] ease-[cubic-bezier(0.4, 0, 0.2, 1)] ${
               index === currentIndex
                 ? 'opacity-100'
                 : 'opacity-0'
@@ -89,22 +98,24 @@ const Carousel: React.FC<CarouselProps> = ({
           />
         ))}
       </div>
-      {isHovered && (
-        <div className="absolute top-0 left-0 w-full h-full flex justify-between items-center z-10">
-          <button
-            className="text-neutral400 text-2xl cursor-pointer"
-            onClick={handleLeftClick}
-          >
-            <FaChevronLeft />
-          </button>
-          <button
-            className="text-neutral400 text-2xl cursor-pointer"
-            onClick={handleRightClick}
-          >
-            <FaChevronRight />
-          </button>
+      {/* {true && (
+        <div className="absolute top-0 left-0 w-full h-full items-center z-10">
+          <div className="flex  w-full h-full justify-between px-[24px] items-center z-10">
+            <button
+              className="flex align-middle items-center justify-center text-neutral600 text-2xl cursor-pointer rounded-full bg-neutral200 p-[4px] h-[24px] w-[24px]"
+              onClick={handleLeftClick}
+            >
+              <FaChevronLeft size={12} />
+            </button>
+            <button
+              className="flex align-middle items-center justify-center text-neutral600 text-2xl cursor-pointer rounded-full bg-neutral200 p-[4px] h-[24px] w-[24px]"
+              onClick={handleRightClick}
+            >
+              <FaChevronRight size={12} />
+            </button>
+          </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

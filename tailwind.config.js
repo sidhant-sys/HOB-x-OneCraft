@@ -43,9 +43,10 @@ module.exports = {
       neutral700: '#5d5d5d',
       neutral800: '#4f4f4f',
       neutral900: '#454545',
-      neutral1000: '#3d3d3d',
+      neutral1000: '#3D3D3D',
       neutral1100: '#000000',
-      transparent: 'transparent'
+      transparent: 'transparent',
+      white: '#ffffff'
     }
   },
   plugins: []

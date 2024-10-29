@@ -76,6 +76,25 @@ const Navbar: React.FC<INavbarProps> = ({
             ))}
           </Dropdown>
         </div>
+        <div
+          className={`flex text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center w-[94px] justify-center ${
+            activeItem === 'story'
+              ? 'border-b-2 border-neutral1000'
+              : ''
+          }`}
+          onClick={() =>
+            navigateTo(URL_PATHS.OUR_STORY)
+          }
+        >
+          <div
+            className={`text-center ${
+              activeItem === 'story' &&
+              'text-secondary900'
+            }`}
+          >
+            Our Story
+          </div>
+        </div>
         <div className="flex text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center justify-center w-[174px]">
           <Button size="small">Contact Us</Button>
         </div>

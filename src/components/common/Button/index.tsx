@@ -1,44 +1,64 @@
-import * as React from 'react';
+import React, {
+  useCallback,
+  useState
+} from 'react';
 import { IButtonProps } from './type';
+import { getIconFromMapper } from '~assets/icons';
 
 const Button = (props: IButtonProps) => {
+  const [isHovered, setIsHovered] =
+    useState(false);
+
   const {
     children,
     onClick,
     disabled = false,
     variant = 'primary',
     size = 'medium',
-    theme = 'dark'
+    theme = 'dark',
+    iconEle = null,
+    iconId,
+    iconFillColor = '',
+    className = ''
   } = props;
 
-  const getButtonClasses =
-    React.useCallback(() => {
-      const rootClassNames = `rounded-[100px] cursor-pointer ${getWidth()} ${getHeight()} ${getHorizontalPadding()} ${getVerticalPaddingClassName()} ${getFontClasses()}`;
-      if (theme === 'dark') {
-        if (variant === 'primary') {
-          return `${rootClassNames} bg-primary1000 hover:bg-primary1100 disabled:bg-neutral400 text-[#fff]`;
-        } else if (variant === 'secondary') {
-          return `${rootClassNames} text-primary1000 border-primary1000 border-[3px] hover:bg-primary1100 hover:text-[#fff] hover:border-transparent disabled:bg-neutral400 disabled:text-neutral400 disabled:border-neutral400`;
-        }
-      }
-      if (theme === 'light') {
-        if (variant === 'primary') {
-          return `${rootClassNames} bg-secondary500 hover:bg-secondary600 disabled:bg-neutral400 text-[#fff]`;
-        } else if (variant === 'secondary') {
-          return `${rootClassNames} text-secondary500 border-secondary500 border-[3px] hover:bg-secondary600 hover:text-[#fff] hover:border-transparent disabled:bg-neutral400 disabled:text-neutral400 disabled:border-neutral400`;
-        }
-      }
-    }, [theme, variant]);
+  const Icon = getIconFromMapper(iconId || '');
 
-  const getWidth = React.useCallback(() => {
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const getButtonClasses = useCallback(() => {
+    const rootClassNames = `flex flex-row items-center gap-x-[12px] w-max rounded-[100px] cursor-pointer ${getWidth()} ${getHeight()} ${getHorizontalPadding()} ${getVerticalPaddingClassName()} ${getFontClasses()}`;
+    if (theme === 'dark') {
+      if (variant === 'primary') {
+        return `${rootClassNames} bg-primary1000 hover:bg-primary1100 disabled:bg-neutral400 text-[#fff]`;
+      } else if (variant === 'secondary') {
+        return `${rootClassNames} text-primary1000 border-primary1000 border-[3px] hover:bg-primary1100 hover:text-[#fff] hover:border-transparent disabled:bg-neutral400 disabled:text-neutral400 disabled:border-neutral400`;
+      }
+    }
+    if (theme === 'light') {
+      if (variant === 'primary') {
+        return `${rootClassNames} bg-secondary500 hover:bg-secondary600 disabled:bg-neutral400 text-[#fff]`;
+      } else if (variant === 'secondary') {
+        return `${rootClassNames} text-secondary500 border-secondary500 border-[3px] hover:bg-secondary600 hover:text-[#fff] hover:border-transparent disabled:bg-neutral400 disabled:text-neutral400 disabled:border-neutral400`;
+      }
+    }
+  }, [theme, variant]);
+
+  const getWidth = useCallback(() => {
     if (size === 'large') {
-      return 'w-[185px]';
+      return 'max-w-[185px]';
     } else if (size === 'medium') {
-      return 'w-[194px]';
-    } else return 'w-[167px]';
+      return 'max-w-[194px]';
+    } else return 'max-w-[167px]';
   }, [size]);
 
-  const getHeight = React.useCallback(() => {
+  const getHeight = useCallback(() => {
     if (size === 'large') {
       return variant === 'primary'
         ? 'h-[56px]'
@@ -58,7 +78,7 @@ const Button = (props: IButtonProps) => {
   };
 
   const getVerticalPaddingClassName =
-    React.useCallback(() => {
+    useCallback(() => {
       if (size === 'large') {
         return 'py-[20px]';
       } else if (size === 'medium') {
@@ -66,7 +86,7 @@ const Button = (props: IButtonProps) => {
       } else return 'py-[15px]';
     }, [size]);
 
-  const getFontClasses = React.useCallback(() => {
+  const getFontClasses = useCallback(() => {
     if (size === 'large') {
       return 'text-base leading-4 font-semibold';
     } else if (size === 'medium') {
@@ -77,11 +97,20 @@ const Button = (props: IButtonProps) => {
 
   return (
     <button
-      className={getButtonClasses()}
+      className={`${getButtonClasses()} ${className}`}
       disabled={disabled}
       onClick={onClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {children}
+      {iconId && (
+        <Icon
+          fill={
+            isHovered ? '#fff' : iconFillColor
+          }
+        />
+      )}
     </button>
   );
 };

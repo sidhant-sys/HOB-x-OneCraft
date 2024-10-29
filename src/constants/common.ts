@@ -1,8 +1,9 @@
+import images from '~assets/image';
+
 export const PortfolioItems = {
   REDJ: {
     title: 'Real Estate Development Journey',
-    imageSrc:
-      '/src/assets/images/details/redj.png',
+    imageSrc: images.Redj,
     JOURNEY_CONFIG: {
       JOURNEY_TITLE: 'Our Journey so Far',
       JOURNEY_SUBTITLE:
@@ -13,32 +14,28 @@ export const PortfolioItems = {
           title: 'Official Launch',
           subtitle:
             'Formal establishment with the registration of Brar Property Developments, marking the beginning of multiple townhouse and property development projects.',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         },
         {
           year: '2012',
           title: 'Foundation Projects',
           subtitle:
             'Pioneered the purchase of Englobo sites, setting the foundation for future large-scale developments.',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         },
         {
           year: '2007',
           title: 'Official Launch',
           subtitle:
             'Formal establishment with the registration of Brar Property Developments, marking the beginning of multiple townhouse and property development projects.',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         },
         {
           year: '2012',
           title: 'Foundation Projects',
           subtitle:
             'Pioneered the purchase of Englobo sites, setting the foundation for future large-scale developments.',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         }
       ]
     },
@@ -49,29 +46,25 @@ export const PortfolioItems = {
         'This demonstrates our progressive expansion strategy. Our notable projects include luxury townhouses in Frankston, Clayton, Clayton South, and Sunshine, as well as high-end homes in Balwyn and Burwood.',
       CARDS: [
         {
-          imageSrc:
-            '/src/assets/images/details/redj_acquisition.png',
+          imageSrc: images.RedjAquisition,
           highlightedText:
             '1410 and 1460 Dohertys Rd, Mt Cottrell',
           text: ' of Acreage lands'
         },
         {
-          imageSrc:
-            '/src/assets/images/details/redj_acquisition.png',
+          imageSrc: images.RedjAquisition,
           highlightedText:
             '1410 and 1460 Dohertys Rd, Mt Cottrell',
           text: ' of Acreage lands'
         },
         {
-          imageSrc:
-            '/src/assets/images/details/redj_acquisition.png',
+          imageSrc: images.RedjAquisition,
           highlightedText:
             '1410 and 1460 Dohertys Rd, Mt Cottrell',
           text: ' of Acreage lands'
         },
         {
-          imageSrc:
-            '/src/assets/images/details/redj_acquisition.png',
+          imageSrc: images.RedjAquisition,
           highlightedText:
             '1410 and 1460 Dohertys Rd, Mt Cottrell',
           text: ' of Acreage lands'
@@ -83,46 +76,39 @@ export const PortfolioItems = {
       SUBTITLE: `Our portfolio features a diverse range of projects, with the total value of our current holdings and developments estimated at $850 million. This reflects our ongoing growth and unwavering commitment to excellence.`,
       CARDS: [
         {
-          imageSrc:
-            '/src/assets/images/details/redj_current_acquisition.png',
+          imageSrc: images.RedjCurrentAcquisition,
           title: 'The Brarz OfficerBusiness Park',
           subtitle: 'Cardinia Road, Officer'
         },
         {
-          imageSrc:
-            '/src/assets/images/details/redj_current_acquisition.png',
+          imageSrc: images.RedjCurrentAcquisition,
           title: 'The Brarz OfficerBusiness Park',
           subtitle: 'Cardinia Road, Officer'
         },
         {
-          imageSrc:
-            '/src/assets/images/details/redj_current_acquisition.png',
+          imageSrc: images.RedjCurrentAcquisition,
           title: 'The Brarz OfficerBusiness Park',
           subtitle: 'Cardinia Road, Officer'
         },
         {
-          imageSrc:
-            '/src/assets/images/details/redj_current_acquisition.png',
+          imageSrc: images.RedjCurrentAcquisition,
           title: 'The Brarz OfficerBusiness Park',
           subtitle: 'Cardinia Road, Officer'
         },
         {
-          imageSrc:
-            '/src/assets/images/details/redj_current_acquisition.png',
+          imageSrc: images.RedjCurrentAcquisition,
           title: 'The Brarz OfficerBusiness Park',
           subtitle: 'Cardinia Road, Officer'
         },
         {
-          imageSrc:
-            '/src/assets/images/details/redj_current_acquisition.png',
+          imageSrc: images.RedjCurrentAcquisition,
           title: 'The Brarz OfficerBusiness Park',
           subtitle: 'Cardinia Road, Officer'
         }
       ]
     },
     OVERALL_IMPACT: {
-      imgSrc:
-        '/src/assets/images/details/redj_impact.png',
+      imgSrc: images.RedjImpact,
       title: 'Overall Impact',
       description: {
         prefixText:
@@ -136,22 +122,19 @@ export const PortfolioItems = {
     KNOW_MORE_SECTION: [
       {
         title: 'Our Endeavors in Healthcare',
-        imageSrc:
-          '/src/assets/images/details/healthcare.png',
+        imageSrc: images.Healthcare,
         link: ''
       },
       {
         title: 'Our Footprint in Education',
-        imageSrc:
-          '/src/assets/images/details/education.png',
+        imageSrc: images.Education,
         link: ''
       }
     ]
   },
   OFIE: {
     title: 'Our Footprint in Education',
-    imageSrc:
-      '/src/assets/images/details/ofie.png',
+    imageSrc: images.Ofie,
     JOURNEY_CONFIG: {
       JOURNEY_TITLE: 'Our Journey so Far',
       JOURNEY_SUBTITLE:
@@ -162,38 +145,33 @@ export const PortfolioItems = {
           title: '',
           subtitle:
             'We expanded our horizons with the acquisition of another international college, TEDI (Technical Education Devel).',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         },
         {
           year: '2012',
           title: 'Foundation Projects',
           subtitle:
             'We brought another milestone with the registration of Malvern Institute Pty Ltd/CMI. ',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         },
         {
           year: '2010',
           title: '',
           subtitle:
             'We expanded our horizons with the acquisition of another international college, TEDI (Technical Education Devel).',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         },
         {
           year: '2012',
           title: 'Foundation Projects',
           subtitle:
             'We brought another milestone with the registration of Malvern Institute Pty Ltd/CMI. ',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         }
       ]
     },
     OVERALL_IMPACT: {
-      imgSrc:
-        '/src/assets/images/details/ofie_impact.png',
+      imgSrc: images.OfieImpact,
       title: 'Overall Impact',
       description: {
         prefixText:
@@ -207,23 +185,20 @@ export const PortfolioItems = {
     KNOW_MORE_SECTION: [
       {
         title: 'Our Endeavors in Healthcare',
-        imageSrc:
-          '/src/assets/images/details/healthcare.png',
+        imageSrc: images.Healthcare,
         link: ''
       },
       {
         title:
           'Our Real Estate Development Journey',
-        imageSrc:
-          '/src/assets/images/details/real-estate.png',
+        imageSrc: images.RealEstate,
         link: ''
       }
     ]
   },
   OEIH: {
     title: 'Our Endeavors in Healthcare',
-    imageSrc:
-      '/src/assets/images/details/oeih.png',
+    imageSrc: images.Oeih,
     JOURNEY_CONFIG: {
       JOURNEY_TITLE: 'Our Journey so Far',
       JOURNEY_SUBTITLE:
@@ -234,32 +209,28 @@ export const PortfolioItems = {
           title: '',
           subtitle:
             'We expanded our horizons with the acquisition of another international college, TEDI (Technical Education Devel).',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         },
         {
           year: '2012',
           title: 'Foundation Projects',
           subtitle:
             'We brought another milestone with the registration of Malvern Institute Pty Ltd/CMI. ',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         },
         {
           year: '2010',
           title: '',
           subtitle:
             'We expanded our horizons with the acquisition of another international college, TEDI (Technical Education Devel).',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         },
         {
           year: '2012',
           title: 'Foundation Projects',
           subtitle:
             'We brought another milestone with the registration of Malvern Institute Pty Ltd/CMI. ',
-          imgSrc:
-            '/src/assets/images/details/redj_journey_1.png'
+          imgSrc: images.RedjJourney1
         }
       ]
     },
@@ -270,28 +241,24 @@ export const PortfolioItems = {
         'Expanding beyond childcare, the integration of health facilities has been a significant aspect of our journey. Owning and developing the following has bolstered the impact on both child and elder care:',
       CARDS: [
         {
-          imageSrc:
-            '/src/assets/images/details/redj_acquisition.png',
+          imageSrc: images.RedjAquisition,
           highlightedText: '8 childcare centers',
           text: ' across key locations'
         },
         {
-          imageSrc:
-            '/src/assets/images/details/redj_acquisition.png',
+          imageSrc: images.RedjAquisition,
           highlightedText:
             '127-bed aged care facility',
           text: ' with basement and 4 levels'
         },
         {
-          imageSrc:
-            '/src/assets/images/details/redj_acquisition.png',
+          imageSrc: images.RedjAquisition,
           highlightedText:
             'Thornhill Park, Deanside, and Dorreen',
           text: ' Health Centres'
         },
         {
-          imageSrc:
-            '/src/assets/images/details/redj_acquisition.png',
+          imageSrc: images.RedjAquisition,
           highlightedText:
             '4500 sqm swimming pool and medical centre',
           text: ' at Yellow Drive'
@@ -299,8 +266,7 @@ export const PortfolioItems = {
       ]
     },
     OVERALL_IMPACT: {
-      imgSrc:
-        '/src/assets/images/details/oeih_impact.png',
+      imgSrc: images.OeihImpact,
       title: 'Overall Impact',
       description: {
         prefixText:
@@ -315,14 +281,12 @@ export const PortfolioItems = {
       {
         title:
           'Our Real Estate Development Journey',
-        imageSrc:
-          '/src/assets/images/details/real-estate.png',
+        imageSrc: images.RealEstate,
         link: ''
       },
       {
         title: 'Our Footprint in Education',
-        imageSrc:
-          '/src/assets/images/details/education.png',
+        imageSrc: images.Education,
         link: ''
       }
     ]
@@ -352,23 +316,20 @@ export const HOME_CONFIG = {
       'From humble beginnings to a current worth of $850 million, House of Brar’s legacy of growth and excellence is a testament to our dedication to building a prosperous future. Over the years, we have left a lasting mark on the landscape of Australian business.',
     WORK_CARD: [
       {
-        imageSrc:
-          '/src/assets/images/home/work_1.png',
+        imageSrc: images.Work1,
         value: '$850',
         title: 'Real Estate',
         subtitle: 'Shaping communities since 2004'
       },
       {
-        imageSrc:
-          '/src/assets/images/home/work_2.png',
+        imageSrc: images.Work2,
         value: '$90',
         title: 'Healthcare',
         subtitle:
           'Enriching lives through compassionate care'
       },
       {
-        imageSrc:
-          '/src/assets/images/home/work_3.png',
+        imageSrc: images.Work3,
         value: '$50',
         title: 'Education',
         subtitle:
@@ -381,26 +342,22 @@ export const HOME_CONFIG = {
     TITLE: 'Upcoming Projects',
     PROJECTS: [
       {
-        imageSrc:
-          '/src/assets/images/home/upcoming-project1.png',
+        imageSrc: images.UpcomingProject1,
         address:
           '54-68 La Trobe Street, Melbourne'
       },
       {
-        imageSrc:
-          '/src/assets/images/home/upcoming-project2.png',
+        imageSrc: images.UpcomingProject2,
         address:
           '363-379 Mt Alexander, Ascot Vale'
       },
       {
-        imageSrc:
-          '/src/assets/images/home/upcoming-project3.png',
+        imageSrc: images.UpcomingProject3,
         address:
           'Business and Industrial Site on Cardinia Road'
       },
       {
-        imageSrc:
-          '/src/assets/images/home/upcoming-project4.png',
+        imageSrc: images.UpcomingProject4,
         address: 'Industrial Land, Craigieburn'
       }
     ]
@@ -428,7 +385,6 @@ export const HOME_CONFIG = {
         link: '/oeih'
       }
     ],
-    MAP_IMAGE_SRC:
-      '/src/assets/images/home/presence-map.png'
+    MAP_IMAGE_SRC: images.PresenceMap
   }
 };

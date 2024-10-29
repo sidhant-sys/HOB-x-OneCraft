@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {
   Brand,
-  BrandFooter
+  BrandFooter,
+  Mail
 } from '~assets/icons';
 import Button from '../Button';
 import { navigateTo } from '~utils/common';
@@ -10,7 +11,7 @@ import { URL_PATHS } from '~constants/paths';
 const Footer: React.FC = () => {
   return (
     <footer className="flex flex-col bg-primary1100 px-[128px] pt-[70px] pb-[50px] gap-[40px]">
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between items-center">
         <div className="flex flex-col gap-[10px] w-[35%]">
           <div className="flex w-full  align-middle items-center">
             <BrandFooter />
@@ -20,14 +21,18 @@ const Footer: React.FC = () => {
             Excellence
           </div>
         </div>
-        <div className="flex flex-col ml-auto w-[40%] px-[30px] py-[40px] bg-primary1000 gap-[30px] rounded-[12px]">
-          <div className="text-[22px] font-[400] leading-[33px] text-[#fff]">
+        <div className="flex flex-col ml-auto w-[40%] px-[30px] py-[40px] bg-primary1000 rounded-[12px] h-[199px]">
+          <div className="text-[22px] font-[400] leading-[33px] text-[#fff] mb-[30px]">
             Join us and build a legacy with us
           </div>
           <Button
             variant="secondary"
             size="medium"
             theme="light"
+            iconId={'MAIL'}
+            onClick={() =>
+              navigateTo(URL_PATHS.CONTACT_US)
+            }
           >
             Get in Touch
           </Button>
@@ -39,17 +44,22 @@ const Footer: React.FC = () => {
           &copy; 2024. House of Brar. All rights
           reserved.
         </div>
-        <div className="text-[16px] font-[400] leading-[16px] text-[#fff]">
+        <div
+          className="text-[16px] font-[400] leading-[16px] text-[#fff] cursor-pointer"
+          onClick={() =>
+            navigateTo(URL_PATHS.ONE_CRAFT)
+          }
+        >
           Created by One Craft
         </div>
-        <div
+        {/* <div
           className="text-[16px] font-[400] leading-[16px] text-[#fff] cursor-pointer"
           onClick={() =>
             navigateTo(URL_PATHS.PRIVACY)
           }
         >
           Privacy Policy | Terms
-        </div>
+        </div> */}
       </div>
     </footer>
   );

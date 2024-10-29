@@ -13,7 +13,7 @@ const JourneySection: React.FC<
         <div className="text-[36px] leading-[43.2px] font-[400] font-['Marcellus'] text-primary1000">
           {config.JOURNEY_TITLE}
         </div>
-        <div className="text-[18px] leading-[27px] font-[400] text-[#212122]">
+        <div className="text-[18px] leading-[27px] font-[400] text-neutral1000">
           {config.JOURNEY_SUBTITLE}
         </div>
       </div>

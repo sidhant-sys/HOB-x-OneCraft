@@ -12,17 +12,17 @@ const HeroComponent: React.FC<
   } = props;
   return (
     <div
-      className={`${className} relative h-[570px] flex`}
+      className={`${className} relative h-[822px] flex`}
     >
       <div className="relative z-10 w-3/6 h-full flex">
-        <div className="bg-white bg-opacity-75 rounded-lg pl-[108px] pt-[4%]">
+        <div className="bg-white bg-opacity-75 rounded-lg pl-[108px] pt-[126px]">
           <div className="text-[60px] leading-[72px] font-['Marcellus'] text-primary1000">
             {title}
           </div>
         </div>
       </div>
       <ImageComponent
-        className="absolute bottom-0 left-[40%] object-contain"
+        className="absolute bottom-0 left-[40%] object-contain top-[92px]"
         src={imageSrc}
         height="h-[570px]"
         width="w-[60%]"

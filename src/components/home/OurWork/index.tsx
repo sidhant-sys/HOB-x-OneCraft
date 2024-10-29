@@ -17,7 +17,7 @@ const OurWork: React.FC = () => {
             {HOME_CONFIG.OUR_WORK.DESCRIPTION}
           </div>
         </div>
-        <div className="flex flex-row gap-[20px]">
+        <div className="flex flex-row gap-[20px] mt-[52px]">
           {HOME_CONFIG.OUR_WORK.WORK_CARD.map(
             (card, index) => {
               return (

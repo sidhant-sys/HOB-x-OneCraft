@@ -15,21 +15,21 @@ const AcquisitionSection: React.FC<
     <section
       className={`bg-primary1100 p-[108px] flex flex-col ${customWrapperClass}`}
     >
-      <div className="flex flex-row mb-[38px]">
+      <div className="flex flex-row justify-between mb-[38px]">
         <div
           className={`text-[36px] leading-[43.2px] font-[400] font-['Marcellus'] text-secondary400 w-[35%] ${customTitleClass}`}
         >
           {config.TITLE}
         </div>
         <div
-          className={`ml-auto w-[55%] text-[18px] leading-[27px] font-[400] text-primary100 ${customSubtitleClass}`}
+          className={`ml-auto w-[48%] text-[18px] leading-[27px] font-[400] text-primary100 ${customSubtitleClass}`}
         >
           {config.SUBTITLE}
         </div>
       </div>
-      <div className="flex flex-row gap-[20px] max-h-[363px] min-h-[363px]">
+      <div className="flex flex-row  flex-wrap gap-[20px] min-h-[363px]">
         {config.CARDS.map((card, index) => (
-          <div className="flex flex-col max-w-[291px] min-width-[291px] h-[100%] rounded-[12px]">
+          <div className="flex flex-col w-[291px] min-w-[291px] h-[100%] rounded-[12px]">
             <ImageComponent
               src={card.imageSrc}
               width="w-[291px]"

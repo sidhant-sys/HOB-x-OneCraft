@@ -3,6 +3,7 @@ import Button from '~components/common/Button';
 import ImageComponent from '~components/common/Image';
 import { navigateTo } from '~utils/common';
 import { IKnowMoreSectionProps } from './type';
+import { RightArrow } from '~assets/icons';
 
 const KnowMoreSection: React.FC<
   IKnowMoreSectionProps
@@ -13,7 +14,7 @@ const KnowMoreSection: React.FC<
       {config.map((ite, index) => {
         return (
           <div
-            className="flex flex-row px-[40px] py-[30px] bg-secondary300 rounded-[12px]"
+            className="flex flex-row px-[40px] py-[30px] bg-secondary300 rounded-[12px] w-[50%]"
             key={index}
           >
             <div className="flex flex-col gap-[50px] w-[60%]">
@@ -27,6 +28,7 @@ const KnowMoreSection: React.FC<
                 onClick={() =>
                   navigateTo(ite.link)
                 }
+                iconId={'RIGHT_ARROW'}
               >
                 Know more
               </Button>

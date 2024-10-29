@@ -8,11 +8,11 @@ const CurrentProjectsSection: React.FC<
   const { config } = props;
   return (
     <section className="p-[108px] flex flex-col">
-      <div className="flex flex-row mb-[38px]">
+      <div className="flex flex-row mb-[38px] justify-between">
         <div className="text-[36px] leading-[43.2px] font-[400] font-['Marcellus'] text-primary1000 w-[35%]">
           {config.TITLE}
         </div>
-        <div className="ml-auto w-[55%] text-[18px] leading-[27px] font-[400] text-neutral1000">
+        <div className="ml-auto w-[48%] text-[18px] leading-[27px] font-[400] text-neutral1000">
           {config.SUBTITLE}
         </div>
       </div>
@@ -20,7 +20,7 @@ const CurrentProjectsSection: React.FC<
         {config.CARDS.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col max-w-[291px] min-width-[291px] h-[100%] rounded-[12px]"
+            className="flex flex-col w-[291px] min-width-[291px] h-[100%] rounded-[12px]"
           >
             <ImageComponent
               src={card.imageSrc}
