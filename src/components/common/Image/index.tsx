@@ -5,13 +5,15 @@ const ImageComponent: React.FC<IImageProps> = ({
   src,
   height,
   width,
-  className
+  className,
+  style
 }) => {
   return (
     <img
       src={src}
       alt="Dynamic"
       className={`${height} ${width} ${className}`} // Use Tailwind classes
+      style={style}
     />
   );
 };

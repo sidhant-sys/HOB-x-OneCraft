@@ -3,7 +3,8 @@ export const styles = {
     display: 'flex',
     gap: '18px', // Initial gap between cards
     height: '450px',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    flexDirection: 'row'
   },
 
   card: {
@@ -12,6 +13,7 @@ export const styles = {
     minWidth: '360px',
     maxWidth: '360px',
     height: '450px',
-    borderRadius: '12px'
+    borderRadius: '12px',
+    transformOrigin: 'bottom left'
   }
 };

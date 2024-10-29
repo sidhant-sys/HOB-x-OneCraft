@@ -28,6 +28,7 @@ import LegacyImage from './images/story/legacy.webp';
 import Resillience1 from './images/story/resillience-1.webp';
 import Resillience2 from './images/story/resillience-2.webp';
 import VisionImage from './images/story/vision.webp';
+import StoryHeroImage from './images/story/hero-image.webp';
 
 const images = {
   Education,
@@ -57,7 +58,8 @@ const images = {
   LegacyImage,
   Resillience1,
   Resillience2,
-  VisionImage
+  VisionImage,
+  StoryHeroImage
 };
 
 export default images;

@@ -42,9 +42,11 @@ const OurWork: React.FC = () => {
                   <div className="text-[24px] leading-[30.09px] font-[400] text-secondary500 text-center mb-[20px]">
                     {card.title}
                   </div>
-                  <div className="text-[16px] leading-[20.83px] font-[400] text-primary100 text-center">
-                    {card.subtitle}
-                  </div>
+                  <span className="text-[16px] leading-[20.83px] font-[400] text-primary100 text-center">
+                    {card.subtitle.prefixText}{' '}
+                    <br></br>
+                    {card.subtitle.suffixText}
+                  </span>
                 </div>
               );
             }

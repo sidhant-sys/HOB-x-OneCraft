@@ -15,7 +15,7 @@ const HeroComponent: React.FC<
       className={`${className} relative h-[822px] flex`}
     >
       <div className="relative z-10 w-3/6 h-full flex">
-        <div className="bg-white bg-opacity-75 rounded-lg pl-[108px] pt-[126px]">
+        <div className="rounded-lg pl-[108px] pt-[126px]">
           <div className="text-[60px] leading-[72px] font-['Marcellus'] text-primary1000">
             {title}
           </div>
@@ -26,6 +26,10 @@ const HeroComponent: React.FC<
         src={imageSrc}
         height="h-[570px]"
         width="w-[60%]"
+        style={{
+          background:
+            'linear-gradient(90deg, rgba(251, 249, 241, 0) 20%, #FBF9F1 100%)'
+        }}
       />
     </div>
   );

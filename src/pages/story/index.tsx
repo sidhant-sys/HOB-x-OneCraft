@@ -1,7 +1,7 @@
 import React from 'react';
 import { FC } from 'react';
 import Footer from '~components/common/Footer';
-import Navbar from '~components/common/Navbar/Navbar';
+import Navbar from '~components/common/Navbar';
 import HeroComponent from '~components/story/heroComponent';
 import Legacy from '~components/story/Legacy';
 import PioneerExcellence from '~components/story/PioneerExcellence';

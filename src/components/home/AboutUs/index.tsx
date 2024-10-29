@@ -7,14 +7,14 @@ const AboutUs: React.FC = () => {
       <div className="text-[16px] font-[400] leading-[16px] text-neutral600 mb-[8px]">
         {HOME_CONFIG.ABOUT_US.NAME}
       </div>
-      <div className="text-[36px] font-[400] leading-[43.2px] font-['Marcellus'] text-neutral600 mb-[8px] mb-[28px]">
+      <div className="text-[36px] font-[400] leading-[43.2px] font-['Marcellus'] text-primary1000  mb-[28px]">
         {HOME_CONFIG.ABOUT_US.TITLE}
       </div>
-      <div className="flex flex-row justify-between">
-        <div className="text-[18px] font-[400] leading-[27px] w-[50%]">
+      <div className="flex flex-row justify-between gap-x-[64px]">
+        <div className="flex text-[18px] font-[400] leading-[27px] flex-1 text-neutral1000">
           {HOME_CONFIG.ABOUT_US.DESCRIPTION1}
         </div>
-        <div className="text-[18px] font-[400] leading-[27px] w-[50%]">
+        <div className="flex text-[18px] font-[400] leading-[27px] flex-1 text-neutral1000">
           {HOME_CONFIG.ABOUT_US.DESCRIPTION2}
         </div>
       </div>

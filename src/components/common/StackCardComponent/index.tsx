@@ -16,7 +16,8 @@ const StackedCardComponent: React.FC<
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 822) {
+      console.log(window.scrollY, 'scrollY');
+      if (window.scrollY >= 600) {
         setInViewport(true);
       }
     };
@@ -82,6 +83,11 @@ const StackedCardComponent: React.FC<
     const [animatedIndices, setAnimatedIndices] =
       useState<number[]>([]);
 
+    const [
+      animationFinishedIndices,
+      setAnimationFinishedIndices
+    ] = useState<number[]>([0]);
+
     useEffect(() => {
       let timer: any;
       if (inViewport) {
@@ -91,7 +97,7 @@ const StackedCardComponent: React.FC<
             ...prev,
             index
           ]);
-        }, index * 3000); // Delay the animation for each card by index * 1000ms
+        }, index * 2000); // Delay the animation for each card by index * 1000ms
       }
       return () => clearTimeout(timer);
     }, [index, inViewport]);
@@ -103,7 +109,26 @@ const StackedCardComponent: React.FC<
       ).length;
       return -(
         360 * (index - shiftedCount) +
-        18 * (index - shiftedCount)
+        18 * (index - shiftedCount) -
+        32 * index
+      );
+    };
+
+    // const getTiltValue = (index) => {
+    //   return index != 0 &&
+    //     startAnimationIndex === index &&
+    //     animationFinishedIndices.includes(index)
+    //     ? 5 * index
+    //     : 0;
+    // };
+
+    const handleAnimationComplete = (index) => {
+      const modifiedAnimationFinishedIndices = [
+        ...animationFinishedIndices,
+        index
+      ];
+      setAnimationFinishedIndices(
+        modifiedAnimationFinishedIndices
       );
     };
 
@@ -120,11 +145,17 @@ const StackedCardComponent: React.FC<
           zIndex:
             startAnimationIndex === index
               ? index + 1
-              : 0 // Stack from right to left
+              : 0
         }}
-        transition={{ duration: 0.5 }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut'
+        }}
+        onAnimationComplete={() =>
+          handleAnimationComplete(index)
+        }
       >
-        <div className="py-[30px] px-[20px] flex flex-col gap-[12px] bg-secondary300 min-h-[250px] rounded-[12px]">
+        <div className="py-[30px] px-[20px] flex flex-col gap-[12px] bg-secondary300 min-h-[250px]">
           <div className="w-[88px] h-[41px] py-[6px] px-[12px] bg-primary1000">
             <div className="text-[24px] leading-[28.8px] font-[400] text-primary100 font-['Marcellus']">
               {year}

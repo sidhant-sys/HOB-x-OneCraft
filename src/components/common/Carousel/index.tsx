@@ -1,69 +1,60 @@
-import React, {
-  useState,
-  useEffect
-} from 'react';
-import {
-  FaChevronLeft,
-  FaChevronRight
-} from 'react-icons/fa';
-import ImageComponent from '../Image';
-import images from '~assets/image';
+import React from 'react';
+// import {
+//   FaChevronLeft,
+//   FaChevronRight
+// } from 'react-icons/fa';
+// import ImageComponent from '../Image';
 
 interface CarouselProps {
   imagesList?: string[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({
-  imagesList = [
-    images.heroCarousel1,
-    images.heroCarousel2,
-    images.heroCarousel3,
-    images.heroCarousel4
-  ]
+  imagesList = []
 }) => {
-  const [currentIndex, setCurrentIndex] =
-    useState(0);
-  const [isHovered, setIsHovered] =
-    useState(false);
+  // const [currentIndex, setCurrentIndex] =
+  //   useState(0);
+  // const [isHovered, setIsHovered] =
+  //   useState(false);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex(
-        (currentIndex + 1) % imagesList.length
-      );
-    }, 5000);
-    return () => clearInterval(intervalId);
-  }, [
-    currentIndex,
-    isHovered,
-    imagesList.length
-  ]);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setCurrentIndex(
+  //       (currentIndex + 1) % imagesList.length
+  //     );
+  //   }, 5000);
+  //   return () => clearInterval(intervalId);
+  // }, [
+  //   currentIndex,
+  //   isHovered,
+  //   imagesList.length
+  // ]);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+  // const handleMouseEnter = () => {
+  //   setIsHovered(true);
+  // };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  // };
 
-  const handleLeftClick = () => {
-    setCurrentIndex(
-      (currentIndex - 1 + imagesList.length) %
-        imagesList.length
-    );
-  };
+  // const handleLeftClick = () => {
+  //   setCurrentIndex(
+  //     (currentIndex - 1 + imagesList.length) %
+  //       imagesList.length
+  //   );
+  // };
 
-  const handleRightClick = () => {
-    setCurrentIndex(
-      (currentIndex + 1) % imagesList.length
-    );
-  };
+  // const handleRightClick = () => {
+  //   setCurrentIndex(
+  //     (currentIndex + 1) % imagesList.length
+  //   );
+  // };
 
   return (
     <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      // onMouseEnter={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
       className="relative w-full h-[900px] overflow-hidden"
     >
       <div
@@ -83,8 +74,18 @@ const Carousel: React.FC<CarouselProps> = ({
           Building Legacy, Investing in Excellence
         </div>
       </div>
+      <div
+        className="absolute inset-0" // Cover the entire area
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(0, 0, 0, 0.3) -11.67%, #000000 100%)',
+          zIndex: 5,
+          width: '100%',
+          height: '100%'
+        }}
+      />
       <div className="relative w-full h-full overflow-hidden">
-        {imagesList.map((image, index) => (
+        {/* {imagesList.map((image, index) => (
           <ImageComponent
             key={index}
             src={image}
@@ -96,7 +97,26 @@ const Carousel: React.FC<CarouselProps> = ({
                 : 'opacity-0'
             }`}
           />
-        ))}
+        ))} */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        >
+          <source
+            src="./src/assets/videos/home-hero.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video
+          tag.
+        </video>
       </div>
       {/* {true && (
         <div className="absolute top-0 left-0 w-full h-full items-center z-10">

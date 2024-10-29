@@ -2,7 +2,7 @@ import React from 'react';
 import { FC } from 'react';
 import Button from '~components/common/Button';
 import Footer from '~components/common/Footer';
-import Navbar from '~components/common/Navbar/Navbar';
+import Navbar from '~components/common/Navbar';
 
 const ContactUs: FC = () => {
   return (

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import HeroComponent from '~components/common/HeroComponent';
-import Navbar from '~components/common/Navbar/Navbar';
+import Navbar from '~components/common/Navbar';
 import { PAGE_TITLE } from '~constants/common';
 import JourneySection from '~components/details/JourneySection';
 import AcquisitionSection from '~components/details/AcquisitionSection';

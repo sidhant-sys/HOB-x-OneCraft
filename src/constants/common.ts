@@ -197,7 +197,8 @@ export const PortfolioItems = {
     ]
   },
   OEIH: {
-    title: 'Our Endeavors in Healthcare',
+    title:
+      'Our Endeavours in Healthcare and Childcare',
     imageSrc: images.Oeih,
     JOURNEY_CONFIG: {
       JOURNEY_TITLE: 'Our Journey so Far',
@@ -238,7 +239,7 @@ export const PortfolioItems = {
       TITLE:
         'Property Acquisition and Land Development',
       SUBTITLE:
-        'Expanding beyond childcare, the integration of health facilities has been a significant aspect of our journey. Owning and developing the following has bolstered the impact on both child and elder care:',
+        'Expanding beyond childcare, the integration of health facilities has been a significant aspect of our journey. Owning and developing the following has bolstered the impact on both child and elder care.',
       CARDS: [
         {
           imageSrc: images.RedjAquisition,
@@ -319,21 +320,31 @@ export const HOME_CONFIG = {
         imageSrc: images.Work1,
         value: '$850',
         title: 'Real Estate',
-        subtitle: 'Shaping communities since 2004'
+        subtitle: {
+          prefixText:
+            'Shaping communities since 2004',
+          suffixText: 'since 2004'
+        }
       },
       {
         imageSrc: images.Work2,
         value: '$90',
         title: 'Healthcare',
-        subtitle:
-          'Enriching lives through compassionate care'
+        subtitle: {
+          prefixText:
+            'Shaping communities since 2004',
+          suffixText: 'compassionate care'
+        }
       },
       {
         imageSrc: images.Work3,
         value: '$50',
         title: 'Education',
-        subtitle:
-          'Empowering global minds at the forefront of education'
+        subtitle: {
+          prefixText:
+            'Empowering global minds at the',
+          suffixText: 'forefront of education'
+        }
       }
     ]
   },
