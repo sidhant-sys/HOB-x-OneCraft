@@ -4,6 +4,7 @@ import React from 'react';
 //   FaChevronRight
 // } from 'react-icons/fa';
 // import ImageComponent from '../Image';
+import videoSrc from '~assets/videos/home-hero.mp4';
 
 interface CarouselProps {
   imagesList?: string[];
@@ -111,7 +112,7 @@ const Carousel: React.FC<CarouselProps> = ({
           }}
         >
           <source
-            src="./src/assets/videos/home-hero.mp4"
+            src={videoSrc}
             type="video/mp4"
           />
           Your browser does not support the video

@@ -19,5 +19,6 @@ export default defineConfig({
         replacement: '/src/'
       }
     ]
-  }
+  },
+  assetsInclude: ['**/*.mp4']
 });
