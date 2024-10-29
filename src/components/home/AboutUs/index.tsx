@@ -10,7 +10,7 @@ const AboutUs: React.FC = () => {
       <div className="text-[36px] font-[400] leading-[43.2px] font-['Marcellus'] text-primary1000  mb-[28px]">
         {HOME_CONFIG.ABOUT_US.TITLE}
       </div>
-      <div className="flex flex-row justify-between gap-x-[64px]">
+      <div className="flex flex-row justify-around gap-x-[64px]">
         <div className="flex text-[18px] font-[400] leading-[27px] flex-1 text-neutral1000">
           {HOME_CONFIG.ABOUT_US.DESCRIPTION1}
         </div>
