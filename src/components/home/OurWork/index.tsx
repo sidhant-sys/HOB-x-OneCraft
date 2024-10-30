@@ -22,7 +22,7 @@ const OurWork: React.FC = () => {
             (card, index) => {
               return (
                 <div
-                  className="flex flex-col px-[8px] py-[32px] min-w-[395px] h-[410px] items-center rounded-[12px]"
+                  className="flex flex-1 flex-col px-[8px] py-[32px] min-w-[395px] h-[410px] items-center rounded-[12px]"
                   style={{
                     background:
                       'linear-gradient(180deg, rgba(120, 110, 79, 0) 0%, rgba(222, 203, 147, 0.15) 100%)'

@@ -12,12 +12,12 @@ const UpcomingProjects: React.FC = () => {
           {HOME_CONFIG.UPCOMING_PROJECTS.TITLE}
         </div>
       </div>
-      <div className="flex flex-row gap-[20px] h-[366px]">
+      <div className="flex flex-row gap-[20px] h-[366px] w-full">
         {HOME_CONFIG.UPCOMING_PROJECTS.PROJECTS.map(
           (card, index) => {
             return (
               <div
-                className="flex flex-col rounded-[12px] min-w-[291px] min-h-[268px] h-[268px]"
+                className="flex flex-1 flex-col rounded-[12px] min-w-[291px] min-h-[268px] h-[268px]"
                 key={index}
               >
                 <ImageComponent
