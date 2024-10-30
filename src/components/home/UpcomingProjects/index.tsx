@@ -12,7 +12,7 @@ const UpcomingProjects: React.FC = () => {
           {HOME_CONFIG.UPCOMING_PROJECTS.TITLE}
         </div>
       </div>
-      <div className="flex flex-row gap-[20px] h-[366px] w-full">
+      <div className="flex flex-row gap-[20px] h-[366px] w-full items-stretch">
         {HOME_CONFIG.UPCOMING_PROJECTS.PROJECTS.map(
           (card, index) => {
             return (
@@ -24,7 +24,7 @@ const UpcomingProjects: React.FC = () => {
                   src={card.imageSrc}
                   width="w-full"
                   height="h-full"
-                  className="object-cover"
+                  className="object-fill"
                 />
 
                 <div className="p-[20px] text-[24px] font-[400] leading-[28.8px] font-['Marcellus'] text-neutral1000 bg-secondary300 rounded-bl-[12px] rounded-br-[12px]">
