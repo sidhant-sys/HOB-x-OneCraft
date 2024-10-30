@@ -82,7 +82,8 @@ const Carousel: React.FC<CarouselProps> = ({
             'linear-gradient(180deg, rgba(0, 0, 0, 0.3) -11.67%, #000000 100%)',
           zIndex: 5,
           width: '100%',
-          height: '100%'
+          height: '100%',
+          opacity: '50%'
         }}
       />
       <div className="relative w-full h-full overflow-hidden">

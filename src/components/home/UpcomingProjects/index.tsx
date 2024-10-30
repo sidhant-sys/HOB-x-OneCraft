@@ -17,7 +17,7 @@ const UpcomingProjects: React.FC = () => {
           (card, index) => {
             return (
               <div
-                className="flex flex-col rounded-[12px] w-[291px] min-w-[291px] min-h-[268px] h-[268px]"
+                className="flex flex-col rounded-[12px] min-w-[291px] min-h-[268px] h-[268px]"
                 key={index}
               >
                 <ImageComponent
