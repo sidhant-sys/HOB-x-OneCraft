@@ -15,7 +15,7 @@ const StoryOfRessilience: FC = () => {
         <HeaderSeparator fill={'#0a4a33'} />
       </div>
       <div className="flex flex-row">
-        <div className="flex flex-col mr-[116px] w-full">
+        <div className="flex flex-col mr-[116px] w-full items-end">
           <div className="flex flex-col w-[394px] align-middle">
             <div className="w-[394px] h-[280px] mb-[120px]">
               <ImageComponent
