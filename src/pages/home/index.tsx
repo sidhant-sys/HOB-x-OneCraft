@@ -13,6 +13,8 @@ import { PAGE_TITLE } from '~constants/common';
 
 const Home: React.FC = () => {
   const initialNavbarClass = 'absolute z-[999]';
+  const initialBorderClass =
+    'border-secondary900';
   const initialNavbarStyles = {
     background: 'rgba(255, 255, 255, 0.3)',
     backdropFilter: 'blur(4px)'
@@ -25,6 +27,10 @@ const Home: React.FC = () => {
     initialNavbarClass
   );
 
+  const [borderClass, setBorderClass] = useState(
+    initialBorderClass
+  );
+
   useEffect(() => {
     document.title = PAGE_TITLE.HOME;
 
@@ -32,9 +38,11 @@ const Home: React.FC = () => {
       if (window.scrollY > 0) {
         setNavbarClass('sticky');
         setNavbarStyle({});
+        setBorderClass('');
       } else if (window.scrollY === 0) {
         setNavbarStyle(initialNavbarStyles);
         setNavbarClass(initialNavbarClass);
+        setBorderClass(initialBorderClass);
       }
     };
 
@@ -58,6 +66,7 @@ const Home: React.FC = () => {
         selectedValue="Home"
         customClass={navbarClass}
         customStyle={navbarStyle}
+        customBorderClass={borderClass}
       />
       <Carousel />
       <AboutUs />

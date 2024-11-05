@@ -60,21 +60,21 @@ export const STORY_CONFIG = {
       'As we evolve and achieve new milestones, our mission remains clear: to generate exceptional returns and opportunities for other esteemed family offices, guided by the values that built our foundation. Our diversified portfolio reflects our dedication to quality and innovation. House of Brar excels in key sectors:',
     cards: [
       {
-        imageSrc: images.RealEstate,
+        imageSrc: images.RealEstateDark,
         title: 'Real Estate',
         subtitle:
           'Innovative residential and commercial property developments.',
         link: URL_PATHS.REAL_ESTATE
       },
       {
-        imageSrc: images.Education,
+        imageSrc: images.EducationDark,
         title: 'Education',
         subtitle:
           'Private international student education and childcare centres that shape the future.',
         link: URL_PATHS.OEIH
       },
       {
-        imageSrc: images.Healthcare,
+        imageSrc: images.HealthcareDark,
         title: 'Healthcare',
         subtitle:
           'Building medical facilities that prioritize well-being and excellence.',

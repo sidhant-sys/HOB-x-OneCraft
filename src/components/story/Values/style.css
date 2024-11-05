@@ -4,6 +4,7 @@
     #c69949 0%,
     rgba(96, 74, 35, 0) 100%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

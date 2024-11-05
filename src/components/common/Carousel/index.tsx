@@ -105,7 +105,7 @@ const Carousel: React.FC<CarouselProps> = ({
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           style={{
             width: '100%',
             height: '100%',

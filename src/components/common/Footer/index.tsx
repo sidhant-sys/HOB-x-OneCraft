@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               navigateTo(URL_PATHS.CONTACT_US)
             }
           >
-            Get in Touch
+            Get In Touch
           </Button>
         </div>
       </div>

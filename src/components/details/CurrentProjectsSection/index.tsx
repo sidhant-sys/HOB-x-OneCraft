@@ -20,15 +20,15 @@ const CurrentProjectsSection: React.FC<
         {config.CARDS.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col w-[291px] min-width-[291px] h-[100%] rounded-[12px]"
+            className="flex flex-col basis-[calc(25%-20px)] min-w-[291px] max-w-[calc(25%-20px)] h-[100%] rounded-[12px]"
           >
             <ImageComponent
               src={card.imageSrc}
-              width="w-[291px]"
+              width="w-full"
               height="h-[268px]"
             />
-            <div className="p-[20px] bg-secondary300 min-h-[134px] rounded-bl-[12px] rounded-br-[12px]">
-              <span className='text-[24px] font-[400] leading-[28.8px] font-["Marcellus"] text-neutral1000 mb-[12px]'>
+            <div className="flex flex-col gap-[12px] p-[20px] bg-secondary300 min-h-[134px] rounded-bl-[12px] rounded-br-[12px]">
+              <span className='text-[24px] font-[400] leading-[28.8px] font-["Marcellus"] text-neutral1000'>
                 {card.title}
               </span>
               <div className="text-[16px] font-[400] leading-[24px] text-neutral600">

@@ -11,7 +11,8 @@ import { navigateTo } from '~utils/common';
 const Navbar: React.FC<INavbarProps> = ({
   selectedValue,
   customClass = '',
-  customStyle
+  customStyle,
+  customBorderClass = ''
 }) => {
   const [activeItem, setActiveItem] =
     React.useState<string | null>(
@@ -35,7 +36,7 @@ const Navbar: React.FC<INavbarProps> = ({
         <div
           className={`flex text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center w-[94px] justify-center ${
             activeItem === 'Home'
-              ? 'border-b-2 border-neutral1000'
+              ? `border-b-4 border-neutral1000 ${customBorderClass}`
               : ''
           }`}
           onClick={() =>
@@ -54,7 +55,7 @@ const Navbar: React.FC<INavbarProps> = ({
         <div
           className={`flex text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center w-[146px] ${
             activeItem === 'portfolio'
-              ? 'border-b-4 border-secondary900'
+              ? `border-b-4 border-neutral1000 ${customBorderClass}`
               : ''
           }`}
           onClick={() =>
@@ -81,7 +82,7 @@ const Navbar: React.FC<INavbarProps> = ({
         <div
           className={`flex text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center w-[94px] justify-center ${
             activeItem === 'story'
-              ? 'border-b-2 border-neutral1000'
+              ? `border-b-4 border-neutral1000 ${customBorderClass}`
               : ''
           }`}
           onClick={() =>

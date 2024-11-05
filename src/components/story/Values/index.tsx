@@ -28,7 +28,7 @@ const Values: FC = () => {
                 key={`${value.letter}-${index}`}
               >
                 <div
-                  className={`text-[180px] font-[400] leading-[0.6] text-secondary500 font-sherif gradient-text pl-[8px]`}
+                  className={`text-[180px] font-[400] leading-[0.67] text-secondary500 font-sherif gradient-text pl-[8px]`}
                 >
                   {value.letter}
                 </div>

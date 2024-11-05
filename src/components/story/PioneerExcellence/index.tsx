@@ -29,7 +29,7 @@ const PioneerExcellence: FC = () => {
           (card, index) => {
             return (
               <div
-                className="flex flex-col items-center w-[381px] p-[40px] rounded-[12px] text-center"
+                className="flex flex-col basis-[calc(33.33%-40px)]  items-center min-w-[381px] max-w-[calc(33.33%-40px)] p-[40px] rounded-[12px] text-center"
                 style={{
                   background:
                     'rgba(222, 203, 147, 0.15)'
@@ -54,7 +54,7 @@ const PioneerExcellence: FC = () => {
                   iconId={'RIGHT_ARROW'}
                   iconFillColor="#d3b471"
                 >
-                  Know more
+                  Know More
                 </Button>
               </div>
             );

@@ -29,13 +29,13 @@ const AcquisitionSection: React.FC<
       </div>
       <div className="flex flex-row  flex-wrap gap-[20px] min-h-[363px]">
         {config.CARDS.map((card, index) => (
-          <div className="flex flex-col w-[291px] min-w-[291px] h-[100%] rounded-[12px]">
+          <div className="flex flex-col basis-[calc(25%-20px)] min-w-[291px] max-w-[calc(25%-20px)] h-[100%] rounded-[12px]">
             <ImageComponent
               src={card.imageSrc}
-              width="w-[291px]"
+              width="w-full"
               height="h-[242px]"
             />
-            <div className="p-[20px] bg-secondary300 min-h-[121px] rounded-bl-[12px] rounded-br-[12px]">
+            <div className="p-[20px] bg-secondary300 min-h-[121px] rounded-bl-[12px] rounded-br-[12px] text-neutral1000">
               <span className="text-secondary800">
                 {card.highlightedText}
               </span>{' '}

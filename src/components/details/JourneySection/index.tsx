@@ -11,10 +11,16 @@ const JourneySection: React.FC<
     <section className="pl-[108px] h-[450px] flex flex-row align-items-center justify-center gap-[170px] mb-[160px]">
       <div className="flex flex-col gap-[20px] h-full justify-center min-w-[550px] max-w-[550px]">
         <div className="text-[36px] leading-[43.2px] font-[400] font-['Marcellus'] text-primary1000">
-          {config.JOURNEY_TITLE}
+          {config.title}
         </div>
         <div className="text-[18px] leading-[27px] font-[400] text-neutral1000">
-          {config.JOURNEY_SUBTITLE}
+          {config.prefixText}
+          {config.highlightedText && (
+            <span className="text-secondary800">
+              {config.highlightedText}
+            </span>
+          )}
+          {config.suffixText}
         </div>
       </div>
       <StackedCardComponent

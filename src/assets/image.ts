@@ -29,6 +29,9 @@ import Resillience1 from './images/story/resillience-1.webp';
 import Resillience2 from './images/story/resillience-2.webp';
 import VisionImage from './images/story/vision.webp';
 import StoryHeroImage from './images/story/hero-image.webp';
+import RealEstateDark from './images/story/real-estate-dark.webp';
+import EducationDark from './images/story/education-dark.webp';
+import HealthcareDark from './images/story/healthcare-dark.webp';
 
 const images = {
   Education,
@@ -59,7 +62,10 @@ const images = {
   Resillience1,
   Resillience2,
   VisionImage,
-  StoryHeroImage
+  StoryHeroImage,
+  RealEstateDark,
+  EducationDark,
+  HealthcareDark
 };
 
 export default images;

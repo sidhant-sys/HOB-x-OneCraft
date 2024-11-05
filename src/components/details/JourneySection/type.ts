@@ -2,8 +2,10 @@ import { ICardProps } from '~components/common/StackCardComponent/type';
 
 export interface IJourneySectionProps {
   config: {
-    JOURNEY_TITLE: string;
-    JOURNEY_SUBTITLE: string;
+    title: string;
+    prefixText: string;
+    highlightedText: string;
+    suffixText: string;
     JOURNEY_CARDS: ICardProps[];
   };
 }

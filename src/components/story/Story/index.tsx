@@ -14,17 +14,19 @@ const StoryOfRessilience: FC = () => {
         </div>
         <HeaderSeparator fill={'#0a4a33'} />
       </div>
-      <div className="flex flex-row justify-between">
-        <div className="flex flex-col w-[394px]">
-          <div className="w-[394px] h-[280px] mb-[120px]">
-            <ImageComponent
-              src={images.Resillience1}
-              width="w-full"
-              height="h-full"
-            />
-          </div>
-          <div className="text-[20px] font-[400] leading-[30px] text-neutral1000">
-            {STORY_CONFIG.STORY.leftDesc}
+      <div className="flex flex-row">
+        <div className="flex flex-col mr-[116px] w-full">
+          <div className="flex flex-col w-[394px] align-middle">
+            <div className="w-[394px] h-[280px] mb-[120px]">
+              <ImageComponent
+                src={images.Resillience1}
+                width="w-full"
+                height="h-full"
+              />
+            </div>
+            <div className="text-[20px] font-[400] leading-[30px] text-neutral1000">
+              {STORY_CONFIG.STORY.leftDesc}
+            </div>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center">
@@ -32,16 +34,18 @@ const StoryOfRessilience: FC = () => {
           <div className="h-[380px] w-[1px] bg-secondary500"></div>
           <HeaderSeparator />
         </div>
-        <div className="flex flex-col w-[394px]">
-          <div className="text-[20px] font-[400] leading-[30px] text-neutral1000 mb-[120px]">
-            {STORY_CONFIG.STORY.rightDesc}
-          </div>
-          <div className="w-[394px] h-[280px]">
-            <ImageComponent
-              src={images.Resillience2}
-              width="w-full"
-              height="h-full"
-            />
+        <div className="flex flex-col ml-[116px] w-full">
+          <div className="flex flex-col w-[394px] align-middle">
+            <div className="text-[20px] font-[400] leading-[30px] text-neutral1000 mb-[120px]">
+              {STORY_CONFIG.STORY.rightDesc}
+            </div>
+            <div className="w-[394px] h-[280px]">
+              <ImageComponent
+                src={images.Resillience2}
+                width="w-full"
+                height="h-full"
+              />
+            </div>
           </div>
         </div>
       </div>

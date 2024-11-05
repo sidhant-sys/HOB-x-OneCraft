@@ -30,7 +30,7 @@ const KnowMoreSection: React.FC<
                 }
                 iconId={'RIGHT_ARROW'}
               >
-                Know more
+                Know More
               </Button>
             </div>
             <div className="flex ml-auto items-center justify-center">

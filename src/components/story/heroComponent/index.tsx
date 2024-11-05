@@ -11,11 +11,7 @@ const HeroComponent = () => {
         src={images.StoryHeroImage}
         width="w-100p"
         height="h-100p"
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0
-        }}
+        className="absolute top-0 left-0 w-full h-full flex"
       />
       <div
         className="absolute inset-0" // Cover the entire area

@@ -5,9 +5,11 @@ export const PortfolioItems = {
     title: 'Real Estate Development Journey',
     imageSrc: images.Redj,
     JOURNEY_CONFIG: {
-      JOURNEY_TITLE: 'Our Journey so Far',
-      JOURNEY_SUBTITLE:
+      title: 'Our Journey so Far',
+      prefixText:
         'Brar Real Estate Development started in 2004 with its first property acquisition in Australia. Over the years, it has grown significantly. Despite the challenges of 2019 and 2020, including business restructurings, the company found resilience, wisdom, and strength, embracing inner solace during tough times.',
+      highlightedText: '',
+      suffixText: '',
       JOURNEY_CARDS: [
         {
           year: '2007',
@@ -112,11 +114,9 @@ export const PortfolioItems = {
       title: 'Overall Impact',
       description: {
         prefixText:
-          'From humble beginnings with ',
-        highlightedText:
-          '3 townhome developments to overseeing multi million dollar projects,',
-        suffixText:
-          ' Brar Real Estate Development has established a strong presence in the industry. Our journey reflects steady expansion, innovation, and a dedication to delivering superior residential and commercial properties.'
+          'From humble beginnings with 3 townhome developments to overseeing multi-million-dollar projects, our real estate portfolio is now well established across residential and commercial developments. Our journey reflects steady expansion, innovation, and a dedication to delivering superior residential and commercial properties.',
+        highlightedText: '',
+        suffixText: ''
       }
     },
     KNOW_MORE_SECTION: [
@@ -136,9 +136,11 @@ export const PortfolioItems = {
     title: 'Our Footprint in Education',
     imageSrc: images.Ofie,
     JOURNEY_CONFIG: {
-      JOURNEY_TITLE: 'Our Journey so Far',
-      JOURNEY_SUBTITLE:
+      title: 'Our Journey so Far',
+      prefixText:
         'In 2008, we embarked on our first private education venture aimed at offering international students a pathway to a bright future in Australia. This initiative flourished into a network of campuses catering to diverse educational needs.',
+      highlightedText: '',
+      suffixText: '',
       JOURNEY_CARDS: [
         {
           year: '2010',
@@ -201,9 +203,13 @@ export const PortfolioItems = {
       'Our Endeavours in Healthcare and Childcare',
     imageSrc: images.Oeih,
     JOURNEY_CONFIG: {
-      JOURNEY_TITLE: 'Our Journey so Far',
-      JOURNEY_SUBTITLE:
-        'Over the years, this passion for childcare development has resulted in a total of 10 centres across various locations, representing a total investment of $50 million. These facilities have not only provided essential services but also become integral parts of the communities they serve.',
+      title: 'Our Journey so Far',
+      prefixText:
+        'Over the years, this passion for childcare development has resulted in a total of ',
+      highlightedText:
+        '10 centres across various locations, representing a total investment of $50 million',
+      suffixText:
+        '. These facilities have not only provided essential services but also become integral parts of the communities they serve.',
       JOURNEY_CARDS: [
         {
           year: '2010',
@@ -386,13 +392,13 @@ export const HOME_CONFIG = {
       {
         name: 'Education',
         description:
-          'We began our property and land development journey in 2004 with our first acquisition in Australia. Since then, our portfolio has grown to include townhouse developments in prominent locations such as Frankston, Clayton, and Balwyn. Our significant land acquisitions and transformative projects have played a vital role in shaping these communities.',
+          'In 2008, we launched a private education venture to offer international students pathways to a bright future in Australia. By 2010, we expanded by acquiring TEDI and later registered Malvern Institute Pty Ltd/CMI in 2012. These milestones fueled steady growth, resulting in twelve education providers across multiple Australian states, driven by dedication and innovation.',
         link: '/ofie'
       },
       {
         name: 'Healthcare',
         description:
-          'We began our property and land development journey in 2004 with our first acquisition in Australia. Since then, our portfolio has grown to include townhouse developments in prominent locations such as Frankston, Clayton, and Balwyn. Our significant land acquisitions and transformative projects have played a vital role in shaping these communities.',
+          'Since 2014, we’ve developed 10 childcare centres and integrated health services, including an aged care facility and multiple medical centres, with a total investment of $50 million. With two new childcare projects in Adelaide, our portfolio has grown to $90 million, combining childcare and health services to support communities.',
         link: '/oeih'
       }
     ],
