@@ -98,7 +98,12 @@ const Navbar: React.FC<INavbarProps> = ({
             Our Story
           </div>
         </div>
-        <div className="flex text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center justify-center w-[174px]">
+        <div
+          className="flex text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center justify-center w-[174px]"
+          onClick={() =>
+            navigateTo(URL_PATHS.CONTACT_US)
+          }
+        >
           <Button size="small">Contact Us</Button>
         </div>
       </div>
