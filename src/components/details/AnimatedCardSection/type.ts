@@ -5,6 +5,7 @@ export interface ICardProps {
   imgSrc: string;
 }
 
-export interface IStackCardComponentProps {
+export interface IAnimatedCardComponentProps {
   config: ICardProps[];
+  inViewport: boolean;
 }

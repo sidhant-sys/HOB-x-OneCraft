@@ -105,12 +105,13 @@ const Carousel: React.FC<CarouselProps> = ({
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metatdata"
           style={{
             width: '100%',
             height: '100%',
             objectFit: 'cover'
           }}
+          poster="https://via.placeholder.com/150"
         >
           <source
             src={videoSrc}
