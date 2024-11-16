@@ -1,4 +1,5 @@
 import images from '~assets/image';
+import { URL_PATHS } from './paths';
 
 export const PortfolioItems = {
   REDJ: {
@@ -327,20 +328,20 @@ export const HOME_CONFIG = {
         value: '$850',
         title: 'Real Estate',
         subtitle: {
-          prefixText:
-            'Shaping communities since 2004',
+          prefixText: 'Shaping communities',
           suffixText: 'since 2004'
-        }
+        },
+        link: URL_PATHS.REAL_ESTATE
       },
       {
         imageSrc: images.Work2,
         value: '$90',
         title: 'Healthcare',
         subtitle: {
-          prefixText:
-            'Shaping communities since 2004',
+          prefixText: 'Shaping communities',
           suffixText: 'compassionate care'
-        }
+        },
+        link: URL_PATHS.OEIH
       },
       {
         imageSrc: images.Work3,
@@ -350,7 +351,8 @@ export const HOME_CONFIG = {
           prefixText:
             'Empowering global minds at the',
           suffixText: 'forefront of education'
-        }
+        },
+        link: URL_PATHS.OFIE
       }
     ]
   },
