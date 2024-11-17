@@ -112,7 +112,7 @@ const AnimatedCardSection: React.FC<
   };
 
   return (
-    <div className="flex flex-row min-h-[450px] overflow-hidden pl-[48px] gap-x-[18px] pb-[32px]">
+    <div className="flex flex-row min-h-[450px] overflow-hidden pl-[48px] gap-x-[18px] pb-[32px] pt-[32px]">
       {cards.map((card, index) => (
         <div
           className={`flex flex-col min-w-[360px] max-w-[360px] min-h-[450px] rounded-[12px] relative`}
