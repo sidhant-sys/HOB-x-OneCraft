@@ -126,7 +126,9 @@ const AnimatedCardSection: React.FC<
                   }deg)`
                 : `rotate(${tiltAngles[iteration][index]}deg)`,
             transitionDuration:
-              iteration >= 1 ? '1000ms' : '0ms'
+              iteration >= 1 ? '1000ms' : '0ms',
+            boxShadow:
+              '0px 4px 12px 0px rgba(10, 74, 51, 0.24)'
           }}
         >
           <Card
