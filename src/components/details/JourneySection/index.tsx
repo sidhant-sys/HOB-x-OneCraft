@@ -38,7 +38,7 @@ const JourneySection: React.FC<
   return (
     <section className="pl-[108px] mb-[160px]">
       <div
-        className="flex flex-row align-items-center justify-center gap-[170px] h-[450px]"
+        className="flex flex-row align-items-center justify-center gap-[170px] min-h-[450px]"
         ref={sectionRef}
       >
         <div className="flex flex-col gap-[20px] h-full justify-center min-w-[550px] max-w-[550px]">
