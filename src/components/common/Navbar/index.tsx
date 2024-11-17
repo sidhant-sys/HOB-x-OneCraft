@@ -29,12 +29,15 @@ const Navbar: React.FC<INavbarProps> = ({
       className={`flex w-full h-[84px] px-[108px] bg-secondary300 top-0 z-[9999] ${customClass}`}
       style={customStyle}
     >
-      <div className="flex w-full  align-middle items-center">
+      <div
+        className="flex w-full  align-middle items-center cursor-pointer"
+        onClick={() => navigateTo(URL_PATHS.HOME)}
+      >
         <Brand />
       </div>
       <div className="ml-auto align-middle flex flex-row cursor-pointer">
         <div
-          className={`flex text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center w-[94px] justify-center ${
+          className={`flex hover:text-secondary900 text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center w-[94px] justify-center ${
             activeItem === 'Home'
               ? `border-b-4 border-neutral1000 ${customBorderClass}`
               : ''
@@ -53,7 +56,7 @@ const Navbar: React.FC<INavbarProps> = ({
           </div>
         </div>
         <div
-          className={`flex text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center w-[146px] ${
+          className={`flex  text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center w-[146px] ${
             activeItem === 'portfolio'
               ? `border-b-4 border-neutral1000 ${customBorderClass}`
               : ''
@@ -80,7 +83,7 @@ const Navbar: React.FC<INavbarProps> = ({
           </Dropdown>
         </div>
         <div
-          className={`flex text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center w-[94px] justify-center ${
+          className={`flex hover:text-secondary900 text-neutral1000 text-base leading-4 font-normal h-full align-middle items-center w-[94px] justify-center ${
             activeItem === 'story'
               ? `border-b-4 border-neutral1000 ${customBorderClass}`
               : ''

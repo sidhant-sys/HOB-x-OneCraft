@@ -3,6 +3,7 @@ import React, {
   useState
 } from 'react';
 import Carousel from '~components/common/Carousel';
+import FadeInSection from '~components/common/FadeInComponent';
 import Footer from '~components/common/Footer';
 import Navbar from '~components/common/Navbar';
 import AboutUs from '~components/home/AboutUs';
@@ -68,12 +69,24 @@ const Home: React.FC = () => {
         customStyle={navbarStyle}
         customBorderClass={borderClass}
       />
-      <Carousel />
-      <AboutUs />
-      <OurWork />
-      <UpcomingProjects />
-      <OurPresence />
-      <Footer />
+      <FadeInSection>
+        <Carousel />
+      </FadeInSection>
+      <FadeInSection>
+        <AboutUs />
+      </FadeInSection>
+      <FadeInSection>
+        <OurWork />
+      </FadeInSection>
+      <FadeInSection>
+        <UpcomingProjects />
+      </FadeInSection>
+      <FadeInSection>
+        <OurPresence />
+      </FadeInSection>
+      <FadeInSection>
+        <Footer />
+      </FadeInSection>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FC } from 'react';
+import FadeInSection from '~components/common/FadeInComponent';
 import Footer from '~components/common/Footer';
 import Navbar from '~components/common/Navbar';
 import HeroComponent from '~components/story/heroComponent';
@@ -16,13 +17,27 @@ const Story: FC = () => {
         selectedValue="story"
         customClass="sticky"
       />
-      <HeroComponent />
-      <Vision />
-      <Values />
-      <StoryOfRessilience />
-      <PioneerExcellence />
-      <Legacy />
-      <Footer />
+      <FadeInSection>
+        <HeroComponent />
+      </FadeInSection>
+      <FadeInSection>
+        <Vision />
+      </FadeInSection>
+      <FadeInSection>
+        <Values />
+      </FadeInSection>
+      <FadeInSection>
+        <StoryOfRessilience />
+      </FadeInSection>
+      <FadeInSection>
+        <PioneerExcellence />
+      </FadeInSection>
+      <FadeInSection>
+        <Legacy />
+      </FadeInSection>
+      <FadeInSection>
+        <Footer />
+      </FadeInSection>
     </>
   );
 };

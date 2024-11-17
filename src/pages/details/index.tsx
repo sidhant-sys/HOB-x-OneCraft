@@ -9,6 +9,7 @@ import OverallImpactSection from '~components/details/OverallImpactSection';
 import KnowMoreSection from '~components/details/KnowMoreSection';
 import Footer from '~components/common/Footer';
 import { IDetailsPageProps } from './type';
+import FadeInSection from '~components/common/FadeInComponent';
 
 const Details: React.FC<IDetailsPageProps> = (
   props
@@ -25,50 +26,69 @@ const Details: React.FC<IDetailsPageProps> = (
         selectedValue="portfolio"
         customClass="sticky"
       />
-      <HeroComponent
-        className={'py-[92px]'}
-        title={config.title}
-        imageSrc={config.imageSrc}
-      />
-      {config.JOURNEY_CONFIG && (
-        <JourneySection
-          config={config.JOURNEY_CONFIG}
+      <FadeInSection>
+        <HeroComponent
+          className={'py-[92px]'}
+          title={config.title}
+          imageSrc={config.imageSrc}
         />
+      </FadeInSection>
+
+      {config.JOURNEY_CONFIG && (
+        <FadeInSection>
+          <JourneySection
+            config={config.JOURNEY_CONFIG}
+          />
+        </FadeInSection>
       )}
       {config.ACQUISITION_CONFIG && (
-        <AcquisitionSection
-          config={config.ACQUISITION_CONFIG}
-          customWrapperClass={
-            customStyling ? 'bg-secondary200' : ''
-          }
-          customTitleClass={
-            customStyling
-              ? '!text-primary1000'
-              : ''
-          }
-          customSubtitleClass={
-            customStyling
-              ? '!text-neutral1000'
-              : ''
-          }
-        />
+        <FadeInSection>
+          <AcquisitionSection
+            config={config.ACQUISITION_CONFIG}
+            customWrapperClass={
+              customStyling
+                ? 'bg-secondary200'
+                : ''
+            }
+            customTitleClass={
+              customStyling
+                ? '!text-primary1000'
+                : ''
+            }
+            customSubtitleClass={
+              customStyling
+                ? '!text-neutral1000'
+                : ''
+            }
+          />
+        </FadeInSection>
       )}
       {config.CURRENT_PROJECTS_CONFIG && (
-        <CurrentProjectsSection
-          config={config.CURRENT_PROJECTS_CONFIG}
-        />
+        <FadeInSection>
+          <CurrentProjectsSection
+            config={
+              config.CURRENT_PROJECTS_CONFIG
+            }
+          />
+        </FadeInSection>
       )}
       {config.OVERALL_IMPACT && (
-        <OverallImpactSection
-          config={config.OVERALL_IMPACT}
-        />
+        <FadeInSection>
+          <OverallImpactSection
+            config={config.OVERALL_IMPACT}
+          />
+        </FadeInSection>
       )}
       {config.KNOW_MORE_SECTION && (
-        <KnowMoreSection
-          config={config.KNOW_MORE_SECTION}
-        />
+        <FadeInSection>
+          <KnowMoreSection
+            config={config.KNOW_MORE_SECTION}
+          />
+        </FadeInSection>
       )}
-      <Footer />
+      <FadeInSection>
+        <Footer />
+      </FadeInSection>
     </>
   );
 };

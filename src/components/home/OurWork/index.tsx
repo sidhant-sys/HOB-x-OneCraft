@@ -1,4 +1,5 @@
 import React from 'react';
+import { RightArrow } from '~assets/icons';
 import Button from '~components/common/Button';
 import ImageComponent from '~components/common/Image';
 import { HOME_CONFIG } from '~constants/common';
@@ -51,13 +52,15 @@ const OurWork: React.FC = () => {
                       {card.subtitle.suffixText}
                     </span>
                     <Button
-                      variant="primary"
+                      variant="secondary"
                       size="small"
                       theme="light"
                       className="mt-[16px] opacity-0 translate-y-[50px] group-hover:opacity-100 transition-transform duration-500 transform group-hover:translate-y-[-100px]"
                       onClick={() =>
                         navigateTo(card.link)
                       }
+                      iconId={'RIGHT_ARROW'}
+                      iconFillColor="#d3b471"
                     >
                       Know More
                     </Button>
