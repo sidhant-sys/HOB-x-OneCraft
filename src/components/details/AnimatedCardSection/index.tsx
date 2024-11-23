@@ -1,4 +1,5 @@
 import React, {
+  useCallback,
   useEffect,
   useState
 } from 'react';
@@ -8,12 +9,6 @@ import Card from './Card';
 const AnimatedCardSection: React.FC<
   IAnimatedCardComponentProps
 > = (props) => {
-  const [startAnimation, setStartAnimation] =
-    useState(false);
-  const [iteration, setIteration] = useState(
-    startAnimation ? 1 : 0
-  );
-
   const eachCardWithPlusGapSize = -378;
   const tiltAngles = [
     [0, 0, 0, 0],
@@ -22,7 +17,13 @@ const AnimatedCardSection: React.FC<
     [-12, -8, -4, 0]
   ];
 
-  const { config, inViewport, className } = props;
+  const {
+    config,
+    inViewport,
+    className,
+    iteration,
+    startAnimation
+  } = props;
   const totalCards = config.length;
 
   const cards = Array.from(
@@ -35,26 +36,20 @@ const AnimatedCardSection: React.FC<
     })
   );
 
-  useEffect(() => {
-    let timer: number;
-    if (
-      iteration < 3 &&
-      inViewport &&
-      startAnimation
-    ) {
-      timer = setTimeout(
-        () => setIteration(iteration + 1),
-        1000
-      );
-    }
-    return () => clearTimeout(timer);
-  }, [iteration, inViewport, startAnimation]);
-
-  useEffect(() => {
-    if (inViewport) {
-      setStartAnimation(true);
-    }
-  }, [inViewport]);
+  // useEffect(() => {
+  //   let timer: number;
+  //   if (
+  //     iteration < 3 &&
+  //     inViewport &&
+  //     startAnimation
+  //   ) {
+  //     timer = setTimeout(
+  //       () => setIteration(iteration + 1),
+  //       1000
+  //     );
+  //   }
+  //   return () => clearTimeout(timer);
+  // }, [iteration, inViewport, startAnimation]);
 
   const getTransformClass = (
     index: number,
@@ -113,7 +108,7 @@ const AnimatedCardSection: React.FC<
 
   return (
     <div
-      className={`flex flex-row min-h-[450px] overflow-hidden pl-[48px] gap-x-[18px] pb-[32px] pt-[32px] ${className}`}
+      className={`flex flex-row min-h-[450px] overflow-hidden pl-[48px] gap-x-[18px] pb-[32px] pt-[32px] card-container ${className} `}
     >
       {cards.map((card, index) => (
         <div

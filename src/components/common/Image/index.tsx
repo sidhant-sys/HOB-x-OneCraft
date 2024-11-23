@@ -12,7 +12,7 @@ const ImageComponent: React.FC<IImageProps> = ({
     <img
       src={src}
       alt="Dynamic"
-      className={`${height} ${width} ${className}`} // Use Tailwind classes
+      className={`${height} ${width} ${className} object-cover`} // Use Tailwind classes
       style={style}
     />
   );

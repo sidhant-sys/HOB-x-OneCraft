@@ -1,4 +1,8 @@
-import React, { useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useRef,
+  useState
+} from 'react';
 import { IJourneySectionProps } from './type';
 import AnimatedCardSection from '../AnimatedCardSection';
 import { useEffect } from 'react';
@@ -6,41 +10,79 @@ import { useEffect } from 'react';
 const JourneySection: React.FC<
   IJourneySectionProps
 > = (props) => {
+  const [isMobileChecked, setIsMobileChecked] =
+    useState(false);
+  const [startAnimation, setStartAnimation] =
+    useState(false);
+  const [iteration, setIteration] = useState(
+    startAnimation ? 1 : 0
+  );
   const [inViewport, setInViewport] =
     useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] =
+    useState(undefined);
+  const [scrollDelta, setScrollDelta] =
+    useState(0);
 
   const sectionRef = useRef(null);
 
   const { config } = props;
 
   useEffect(() => {
+    if (inViewport) {
+      setStartAnimation(true);
+    }
+  }, [inViewport]);
+
+  useEffect(() => {
+    if (!isMobileChecked) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         // Toggle the state when the component enters/exits the viewport
-        setInViewport(entry.isIntersecting);
+        // setInViewport(entry.isIntersecting);
+        if (
+          entry.isIntersecting &&
+          iteration < 3
+        ) {
+          // Section is in view, activate the wheel event handler
+          setInViewport(true);
+          document.body.style.overflow = 'hidden'; // Prevent page scroll immediately
+        } else {
+          // Section is out of view, reset the scroll handling
+          setInViewport(false);
+          document.body.style.overflow = 'auto'; // Allow page scroll when section is out of view
+        }
       },
       {
-        threshold: 1 // Trigger when 10% of the element is in view
+        threshold: 1 // Trigger when 100% of the element is in view
       }
     );
 
-    if (sectionRef.current) {
+    if (sectionRef.current && !isMobile) {
       observer.observe(sectionRef.current);
     }
 
     return () => {
       // Clean up the observer when the component unmounts
-      if (sectionRef.current) {
+      if (sectionRef.current && !isMobile) {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [iteration, isMobileChecked]);
+
+  useEffect(() => {
+    if (isMobile !== undefined) {
+      setIsMobileChecked(true); // Only set observer after isMobile is determined
+    }
+  }, [isMobile]);
 
   // Update isMobile state based on window width
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Update based on mobile size (768px is a common mobile breakpoint)
+      const width = window.visualViewport
+        ? window.visualViewport.width
+        : document.documentElement.clientWidth;
+      setIsMobile(width < 768); // Update based on mobile size (768px is a common mobile breakpoint)
     };
 
     // Initial check
@@ -60,6 +102,62 @@ const JourneySection: React.FC<
       );
     };
   }, []);
+
+  // Handle scroll event and trigger iteration based on the scroll distance
+  const handleWheel = useCallback(
+    (event: WheelEvent) => {
+      // Only respond to downward scroll (event.deltaY > 0)
+      if (event.deltaY > 0 && iteration < 3) {
+        // Accumulate the scroll delta to track how much the user has scrolled
+        setScrollDelta(
+          (prevDelta) => prevDelta + event.deltaY
+        );
+
+        // Trigger iteration when scroll exceeds a threshold
+        if (Math.abs(scrollDelta) > 150) {
+          setIteration(iteration + 1);
+          setScrollDelta(0); // Reset scroll delta after updating iteration
+        }
+      }
+
+      // Prevent default scroll behavior (page scrolling)
+      if (!isMobile && iteration < 3) {
+        event.preventDefault();
+      }
+    },
+    [scrollDelta]
+  );
+
+  useEffect(() => {
+    // Attach event listener to the document when section is in view
+    if (!isMobile) {
+      if (inViewport && iteration < 3) {
+        document.addEventListener(
+          'wheel',
+          handleWheel,
+          { passive: false }
+        );
+      } else {
+        document.removeEventListener(
+          'wheel',
+          handleWheel
+        );
+      }
+    }
+
+    // Cleanup the event listener when the section goes out of view
+    return () => {
+      document.removeEventListener(
+        'wheel',
+        handleWheel
+      );
+    };
+  }, [
+    handleWheel,
+    inViewport,
+    iteration,
+    isMobile
+  ]);
 
   if (isMobile) {
     // Mobile and Tablet Implementation
@@ -90,11 +188,11 @@ const JourneySection: React.FC<
 
   // Desktop Implementation (unchanged from the original)
   return (
-    <section className="pl-[108px] mb-[160px]">
-      <div
-        className="flex flex-row align-items-center justify-center gap-[170px] min-h-[450px]"
-        ref={sectionRef}
-      >
+    <section
+      className="pl-[108px] mb-[160px] journey-section"
+      ref={sectionRef}
+    >
+      <div className="flex flex-row align-items-center justify-center gap-[170px] min-h-[450px]">
         <div className="flex flex-col gap-[20px] h-full justify-center min-w-[550px] max-w-[550px]">
           <div className="text-[36px] leading-[43.2px] font-[400] font-['Marcellus'] text-primary1000">
             {config.title}
@@ -112,6 +210,8 @@ const JourneySection: React.FC<
         <AnimatedCardSection
           config={config.JOURNEY_CARDS}
           inViewport={inViewport}
+          iteration={iteration}
+          startAnimation={startAnimation}
         />
       </div>
     </section>

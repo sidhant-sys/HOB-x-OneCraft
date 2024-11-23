@@ -1,0 +1,59 @@
+/* CardStack.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background: #f0f0f0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stack-container {
+  position: relative;
+  width: 350px; /* Increased container width */
+  height: 450px; /* Increased container height */
+  overflow: hidden; /* Ensures cards outside the container are hidden */
+  padding: 20px; /* Space for partial visibility */
+  box-sizing: border-box; /* Includes padding in dimensions */
+  background: white; /* Optional: Background for better visibility */
+  border-radius: 20px; /* Optional: Rounded edges for the container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+.card {
+  position: absolute;
+  width: 280px; /* Reduced card width */
+  height: 380px; /* Reduced card height */
+  background: linear-gradient(
+    135deg,
+    #6a5acd,
+    #836fff
+  );
+  border-radius: 20px; /* Rounded edges */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  color: white;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(calc(100% + 20px))
+    scale(1) rotate(0deg); /* Offset cards with a gap */
+  opacity: 0.5; /* Faded initially */
+  transition: transform 0.3s ease,
+    opacity 0.3s ease, box-shadow 0.3s ease; /* Slightly faster animation */
+}
+
+.card:first-child {
+  transform: translateX(0) scale(1) rotate(0deg); /* Fully visible */
+  opacity: 1; /* Fully opaque */
+  z-index: 1; /* Ensure bottom-most card */
+}
+
+.card-content {
+  text-align: center;
+  font-size: 20px;
+}
