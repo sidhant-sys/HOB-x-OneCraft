@@ -8,6 +8,8 @@ const JourneySection: React.FC<
 > = (props) => {
   const [inViewport, setInViewport] =
     useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
   const sectionRef = useRef(null);
 
   const { config } = props;
@@ -35,6 +37,58 @@ const JourneySection: React.FC<
     };
   }, []);
 
+  // Update isMobile state based on window width
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Update based on mobile size (768px is a common mobile breakpoint)
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener to handle resize
+    window.addEventListener(
+      'resize',
+      handleResize
+    );
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener(
+        'resize',
+        handleResize
+      );
+    };
+  }, []);
+
+  if (isMobile) {
+    // Mobile and Tablet Implementation
+    return (
+      <section className="pl-[16px] md:pl-[48px] lg:pl-[108px] mb-[80px] md:mb-[120px] lg:mb-[160px]">
+        <div className="flex flex-col gap-[20px] justify-center min-h-[auto]">
+          {/* Text Content */}
+          <div className="flex flex-col gap-[16px] w-full text-center">
+            <div className="text-[28px] leading-[34px] font-[400] font-['Marcellus'] text-primary1000">
+              {config.title}
+            </div>
+            <div className="text-[16px] leading-[24px] font-[400] text-neutral1000">
+              {config.prefixText}
+              {config.highlightedText && (
+                <span className="text-secondary800">
+                  {config.highlightedText}
+                </span>
+              )}
+              {config.suffixText}
+            </div>
+          </div>
+
+          {/* AnimatedCardSection is not rendered on Mobile */}
+        </div>
+      </section>
+    );
+  }
+
+  // Desktop Implementation (unchanged from the original)
   return (
     <section className="pl-[108px] mb-[160px]">
       <div

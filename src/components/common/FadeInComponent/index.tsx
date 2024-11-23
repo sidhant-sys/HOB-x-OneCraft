@@ -9,7 +9,7 @@ const FadeInSection: FC<{
   return (
     <div
       ref={ref}
-      className={`opacity-0 transform transition-all duration-300 ${
+      className={`opacity-0 transform transition-all duration-100 ${
         inView
           ? 'opacity-100 translate-y-0'
           : 'translate-y-5'

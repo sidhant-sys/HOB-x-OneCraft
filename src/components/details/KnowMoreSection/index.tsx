@@ -10,15 +10,16 @@ const KnowMoreSection: React.FC<
 > = (props) => {
   const { config } = props;
   return (
-    <section className="px-[108px] py-[100px] flex flex-row gap-[40px]">
+    <section className="px-[16px] md:px-[48px] lg:px-[108px] py-[40px] md:py-[100px] flex flex-col md:flex-row gap-[20px] md:gap-[40px]">
       {config.map((ite, index) => {
         return (
           <div
-            className="flex flex-row px-[40px] py-[30px] bg-secondary300 rounded-[12px] w-[50%]"
+            className="flex flex-col md:flex-row px-[20px] md:px-[40px] py-[20px] md:py-[30px] bg-secondary300 rounded-[12px] w-full md:w-[50%]"
             key={index}
           >
-            <div className="flex flex-col gap-[50px] w-[60%]">
-              <div className="text-[36px] font-[400] leading-[43.2px] text-primary1000 font-['Marcellus']">
+            {/* Text Content */}
+            <div className="flex flex-col gap-[30px] w-full md:w-[60%]">
+              <div className="text-[28px] md:text-[36px] font-[400] leading-[34px] md:leading-[43.2px] text-primary1000 font-['Marcellus']">
                 {ite.title}
               </div>
               <Button
@@ -33,11 +34,14 @@ const KnowMoreSection: React.FC<
                 Know More
               </Button>
             </div>
-            <div className="flex ml-auto items-center justify-center">
+
+            {/* Image */}
+            <div className="flex ml-auto items-center justify-center mt-[20px] md:mt-0 hidden md:block">
               <ImageComponent
                 src={ite.imageSrc}
-                width="w-[120px]"
-                height="h-[120px]"
+                width="w-[60px] md:w-[120px]"
+                height="h-[60px] md:h-[120px]"
+                className="object-contain"
               />
             </div>
           </div>

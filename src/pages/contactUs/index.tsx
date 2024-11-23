@@ -10,18 +10,19 @@ const ContactUs: FC = () => {
     <>
       <Navbar />
       <FadeInSection>
-        <div className="flex flex-row py-[80px] px-[212px]">
-          <div className="flex flex-col w-1/2">
-            <div className="flex flex-col w-[394px]">
-              <div className='text-[48px] font-[400] leading-[57.6pxpx] text-primary1000 font-["Marcellus"] mb-[55px] w-[306px]'>
+        <div className="flex flex-col md:flex-row py-[80px] px-[16px] md:px-[212px]">
+          {/* Left Column */}
+          <div className="flex flex-col w-full md:w-1/2 mb-[40px] md:mb-0">
+            <div className="flex flex-col w-full md:w-[394px]">
+              <div className="text-[32px] md:text-[48px] font-[400] leading-[38.4px] md:leading-[57.6px] text-primary1000 font-['Marcellus'] mb-[40px] md:mb-[55px] w-full md:w-[306px]">
                 Get in Touch with Us
               </div>
-              <div className="flex flex-col h-[403px] border-[1px] border-neutral300 rounded-[12px] ">
-                <div className="flex flex-col p-[30px] gap-y-[16px]">
-                  <div className='text-[24px] font-[400] leading-[28.8px] text-neutral1000 font-["Marcellus"]'>
+              <div className="flex flex-col h-[403px] border-[1px] border-neutral300 rounded-[12px]">
+                <div className="flex flex-col p-[20px] md:p-[30px] gap-y-[16px]">
+                  <div className="text-[18px] md:text-[24px] font-[400] leading-[28.8px] text-neutral1000 font-['Marcellus']">
                     Our Corporate Office
                   </div>
-                  <div className="text-[16px] font-[400] leading-[24px] text-neutral1000 ">
+                  <div className="text-[14px] md:text-[16px] font-[400] leading-[24px] text-neutral1000">
                     423 Little Collins St,
                     Melbourne VIC 3000, Australia
                   </div>
@@ -38,13 +39,16 @@ const ContactUs: FC = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-1/2 bg-secondary300 p-[50px] rounded-[12px]">
+
+          {/* Right Column */}
+          <div className="flex flex-col w-full md:w-1/2 bg-secondary300 p-[20px] md:p-[50px] rounded-[12px]">
             <form
               action="mailto:abc@xyz.com"
               method="POST"
               encType="text/plain"
-              className="flex flex-col gap-y-[24px]"
+              className="flex flex-col gap-y-[20px]"
             >
+              {/* Name */}
               <div className="flex flex-col gap-y-[6px]">
                 <div className="text-[14px] font-[400] leading-[21px] text-neutral1000">
                   Name &#42;
@@ -55,8 +59,10 @@ const ContactUs: FC = () => {
                   placeholder="Enter your name"
                   required
                   className="py-[12px] px-[16px] bg-white border border-secondary500 rounded focus:outline-none"
-                ></input>
+                />
               </div>
+
+              {/* Phone Number */}
               <div className="flex flex-col gap-y-[6px]">
                 <div className="text-[14px] font-[400] leading-[21px] text-neutral1000">
                   Phone Number &#42;
@@ -67,8 +73,10 @@ const ContactUs: FC = () => {
                   placeholder="Enter your phone number"
                   required
                   className="py-[12px] px-[16px] bg-white border border-secondary500 rounded focus:outline-none"
-                ></input>
+                />
               </div>
+
+              {/* Email */}
               <div className="flex flex-col gap-y-[6px]">
                 <div className="text-[14px] font-[400] leading-[21px] text-neutral1000">
                   Email &#42;
@@ -79,8 +87,10 @@ const ContactUs: FC = () => {
                   placeholder="Enter your Email"
                   required
                   className="py-[12px] px-[16px] bg-white border border-secondary500 rounded focus:outline-none"
-                ></input>
+                />
               </div>
+
+              {/* Message */}
               <div className="flex flex-col gap-y-[6px]">
                 <div className="text-[14px] font-[400] leading-[21px] text-neutral1000">
                   Message &#42;
@@ -93,6 +103,8 @@ const ContactUs: FC = () => {
                   placeholder="Enter your message"
                 ></textarea>
               </div>
+
+              {/* Submit Button */}
               <div className="flex w-full items-center justify-center">
                 <Button
                   size="large"

@@ -8,4 +8,5 @@ export interface ICardProps {
 export interface IAnimatedCardComponentProps {
   config: ICardProps[];
   inViewport: boolean;
+  className?: string;
 }

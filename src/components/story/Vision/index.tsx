@@ -5,12 +5,12 @@ import { STORY_CONFIG } from '~constants/story';
 
 const Vision: FC = () => {
   return (
-    <div
+    <section
       className={
-        'px-[108px] py-[160px] flex flex-row items-center justify-between'
+        'px-[16px] py-[40px] md:px-[108px] md:py-[160px] flex flex-col md:flex-row items-center justify-between'
       }
     >
-      <div className="flex flex-col w-[597px]">
+      <div className="flex flex-col w-full md:w-[597px]">
         <div className='text-[36px] font-[400] leading-[43.2px] text-primary1000 font-["Marcellus"] mb-[20px]'>
           {STORY_CONFIG.VISION.title}
         </div>
@@ -30,14 +30,16 @@ const Vision: FC = () => {
           {STORY_CONFIG.VISION.subtitle.extraText}
         </div>
       </div>
-      <div className="h-[430px] w-[430px]">
+
+      {/* Image with smaller size and comes directly below title on mobile */}
+      <div className="h-[250px] w-[250px] md:h-[430px] md:w-[430px] mt-[20px] md:mt-0">
         <img
           src={images.VisionImage}
           alt="Vision"
-          width={430}
+          className="w-full h-full object-cover"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

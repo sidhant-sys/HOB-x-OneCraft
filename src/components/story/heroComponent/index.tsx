@@ -1,12 +1,41 @@
-import React from 'react';
+import React, {
+  useEffect,
+  useState
+} from 'react';
 import { BrandGolden } from '~assets/icons';
 import images from '~assets/image';
 import ImageComponent from '~components/common/Image';
 import { STORY_CONFIG } from '~constants/story';
 
 const HeroComponent = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      console.log(window.innerWidth, 'inner');
+      setIsMobile(window.innerWidth < 768); // Update based on mobile size (768px is a common mobile breakpoint)
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener to handle resize
+    window.addEventListener(
+      'resize',
+      handleResize
+    );
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener(
+        'resize',
+        handleResize
+      );
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col h-[750px] w-full relative">
+    <div className="flex flex-col h-[450px] sm:h-[600px] lg:h-[750px] w-full relative">
       <ImageComponent
         src={images.StoryHeroImage}
         width="w-100p"
@@ -24,16 +53,17 @@ const HeroComponent = () => {
         }}
       />
       <div className="absolute flex flex-col items-center justify-center h-full w-full z-10">
-        <BrandGolden />
-        <div
-          className={
-            'flex flex-col mt-[32px] items-center'
-          }
-        >
-          <div className='text-[60px] font-[400] leading-[72px] text-secondary500 font-["Marcellus"]'>
+        <BrandGolden
+          width={96}
+          height={96}
+          className="lg:w-[188px] lg:h-[188px]"
+        />{' '}
+        {/* Adjust BrandGolden size for mobile */}
+        <div className="flex flex-col mt-[32px] items-center w-full px-4 sm:px-8">
+          <div className="text-[48px] sm:text-[60px] font-[400] leading-[56px] sm:leading-[72px] text-secondary500 font-['Marcellus'] text-center">
             {STORY_CONFIG.HERO.title}
           </div>
-          <div className='text-[60px] font-[400] leading-[72px] text-secondary500 font-["Marcellus"]'>
+          <div className="text-[48px] sm:text-[60px] font-[400] leading-[56px] sm:leading-[72px] text-secondary500 font-['Marcellus'] text-center">
             {STORY_CONFIG.HERO.subtitle}
           </div>
         </div>

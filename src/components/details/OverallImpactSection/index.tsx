@@ -7,20 +7,21 @@ const OverallImpactSection: React.FC<
 > = (props) => {
   const { config } = props;
   return (
-    <section className="px-[108px] py-[70px] flex flex-row bg-primary1100 items-center justify-center">
+    <section className="px-[16px] md:px-[48px] lg:px-[108px] py-[40px] md:py-[70px] flex flex-col md:flex-row bg-primary1100 items-center justify-center">
       <ImageComponent
         src={config.imgSrc}
-        width="w-[498px]"
-        height="h-[498px]"
+        width="w-full md:w-[498px]"
+        height="h-[300px] md:h-[498px]"
+        className="object-contain"
       />
-      <div className="ml-[124px] flex flex-col gap-[40px]">
-        <div className="text-[36px] font-[400] leading-[43.2px] text-secondary500 font-['Marcellus']">
+      <div className="mt-[20px] md:mt-0 ml-0 md:ml-[124px] flex flex-col gap-[24px] md:gap-[40px] text-center md:text-left">
+        <div className="text-[28px] md:text-[36px] font-[400] leading-[34px] md:leading-[43.2px] text-secondary500 font-['Marcellus']">
           {config.title}
         </div>
-        <div className="text-[22px] font-[400] leading-[33px] text-primary100">
+        <div className="text-[18px] md:text-[22px] font-[400] leading-[28px] md:leading-[33px] text-primary100">
           {config.description.prefixText}
           {config.description.highlightedText && (
-            <span className="text-[24px] font-[700] leading-[36px] bg-primary700">
+            <span className="text-[20px] md:text-[24px] font-[700] leading-[36px] bg-primary700">
               {config.description.highlightedText}
             </span>
           )}
