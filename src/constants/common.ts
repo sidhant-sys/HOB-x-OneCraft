@@ -41,7 +41,7 @@ export const PortfolioItems = {
           imgSrc: images.RedjJourney4
         },
         {
-          year: '2020',
+          year: '2022',
           title: 'Murray Estate',
           subtitle:
             'Introduced The Village Thornhill Park Estate in Murray Road, Thornhill Park.',
@@ -401,8 +401,8 @@ export const HOME_CONFIG = {
   },
   PRESENCE: {
     NAME: '',
-    TITLE:
-      'Our Investments Across Melbourne, Victoria',
+    TITLE: 'Our Investments Across',
+    SUBTITLE: 'Melbourne, Victoria',
     CATEGORIES: [
       {
         name: 'Real Estate',

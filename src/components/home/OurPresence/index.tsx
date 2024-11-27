@@ -24,7 +24,8 @@ const OurPresence: React.FC = () => {
             {HOME_CONFIG.PRESENCE.NAME}
           </div>
           <div className="text-[24px] sm:text-[30px] lg:text-[36px] font-[400] leading-[30px] sm:leading-[38px] lg:leading-[43.2px] font-['Marcellus'] text-primary1000 w-full sm:w-[80%] lg:w-[70%]">
-            {HOME_CONFIG.PRESENCE.TITLE}
+            {HOME_CONFIG.PRESENCE.TITLE} <br></br>
+            {HOME_CONFIG.PRESENCE.SUBTITLE}
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-[80px]">
