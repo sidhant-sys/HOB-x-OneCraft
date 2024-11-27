@@ -28,15 +28,26 @@ const AcquisitionSection: React.FC<
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row flex-wrap gap-[16px] md:gap-[20px] min-h-[363px]">
+      <div
+        className="grid gap-[16px] md:gap-[20px] w-full"
+        style={{
+          gridTemplateColumns:
+            'repeat(auto-fit, minmax(250px, 1fr))'
+        }}
+      >
         {config.CARDS.map((card, index) => (
-          <div className="flex flex-col basis-[100%] md:basis-[calc(25%-20px)] min-w-[100%] md:min-w-[291px] max-w-full md:max-w-[calc(25%-20px)] h-[100%] rounded-[12px]">
+          <div
+            key={index}
+            className="flex flex-col h-[100%] rounded-[12px]"
+          >
+            {/* Card Image */}
             <ImageComponent
               src={card.imageSrc}
               width="w-full"
               height="h-[242px]"
               className="rounded-tl-[12px] rounded-tr-[12px]"
             />
+            {/* Card Text */}
             <div className="p-[16px] md:p-[20px] bg-secondary300 min-h-[121px] rounded-bl-[12px] rounded-br-[12px] text-neutral1000">
               <span className="text-secondary800">
                 {card.highlightedText}

@@ -14,7 +14,10 @@ const Legacy: FC = () => {
           height="h-full"
         />
       </div>
-      <div className="absolute flex items-center flex-col justify-center text-center top-[60px] md:top-[110px] px-[16px] w-full">
+      <div
+        className="absolute flex items-center flex-col justify-center text-center top-[60px] md:top-[110px]"
+        style={{ width: 'calc(100% - 120px)' }}
+      >
         <div className='text-[24px] md:text-[36px] font-[400] leading-[30px] md:leading-[43.2px] text-primary1000 font-["Marcellus"] mb-[16px] md:mb-[20px] max-w-[90%]'>
           {STORY_CONFIG.LEGACY.title}
         </div>

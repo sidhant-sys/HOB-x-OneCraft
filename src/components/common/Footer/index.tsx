@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             <BrandFooter />
           </div>
           <div className="text-[20px] sm:text-[28px] lg:text-[36px] font-[400] leading-[28px] sm:leading-[36px] lg:leading-[43.2px] font-['Marcellus'] text-secondary500">
-            Building Legacy, Investing in
+            Building Legacy, <br></br>Investing in
             Excellence
           </div>
         </div>

@@ -45,7 +45,7 @@ const PioneerExcellence: FC = () => {
                 <div className="text-[20px] md:text-[24px] font-[400] leading-[24px] md:leading-[28.8px] text-secondary500 font-['Marcellus'] mb-[12px]">
                   {card.title}
                 </div>
-                <div className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[27px] text-primary100 mb-[40px]">
+                <div className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[27px] text-primary100 mb-[40px] min-h-[80px]">
                   {card.subtitle}
                 </div>
                 <Button

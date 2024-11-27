@@ -47,8 +47,8 @@ const OurPresence: React.FC = () => {
               }
             )}
           </div>
-          <div className="flex flex-col">
-            <div className="text-[16px] sm:text-[18px] leading-[24px] sm:leading-[27px] font-[400] text-neutral1000 w-full sm:w-[60%] z-[9] mb-4 sm:mb-[22px]">
+          <div className="flex flex-col justify-center">
+            <div className="text-[16px] sm:text-[18px] leading-[24px] sm:leading-[27px] font-[400] text-neutral1000 w-full sm:w-[60%] z-[9] ">
               {
                 HOME_CONFIG.PRESENCE.CATEGORIES[
                   investmentCategoryIndex

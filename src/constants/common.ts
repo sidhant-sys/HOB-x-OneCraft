@@ -170,15 +170,15 @@ export const PortfolioItems = {
           imgSrc: images.OfieJourney2
         },
         {
-          year: '2010',
+          year: '2014',
           title: '',
           subtitle:
             'First Childcare Project in Lyndhurst – Paving the way for future early education centers.',
           imgSrc: images.OfieJourney3
         },
         {
-          year: '2012',
-          title: 'Foundation Projects',
+          year: '2015',
+          title: '',
           subtitle:
             'Melton and Traralgon Childcare Centres – New openings, strengthening our commitment to quality early education. ',
           imgSrc: images.OfieJourney4
@@ -191,9 +191,10 @@ export const PortfolioItems = {
       description: {
         prefixText:
           'These successful acquisitions marked a period of steady growth and innovation. From one education provider to ',
-        highlightedText: '',
+        highlightedText:
+          '12 establishments spread across multiple states of Australia,',
         suffixText:
-          '12 establishments spread across multiple states of Australia, our educational journey has been a testament to relentless dedication and continuous expansion.'
+          ' our educational journey has been a testament to relentless dedication and continuous expansion.'
       }
     },
     KNOW_MORE_SECTION: [
@@ -391,16 +392,17 @@ export const HOME_CONFIG = {
       {
         imageSrc: images.HomeProject8,
         address: 'Adelaide Developments'
-      },
-      {
-        imageSrc: images.HomeProject9,
-        address: 'Employment Precinct Officer'
       }
+      // {
+      //   imageSrc: images.HomeProject9,
+      //   address: 'Employment Precinct Officer'
+      // }
     ]
   },
   PRESENCE: {
-    NAME: 'OUR PRESENCE',
-    TITLE: 'Our Investments Across The Country',
+    NAME: '',
+    TITLE:
+      'Our Investments Across Melbourne, Victoria',
     CATEGORIES: [
       {
         name: 'Real Estate',
