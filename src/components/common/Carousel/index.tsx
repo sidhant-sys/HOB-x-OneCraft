@@ -64,7 +64,7 @@ const Carousel: React.FC<CarouselProps> = ({
             }}
             className="text-[32px] sm:text-[48px] md:text-[60px] lg:text-[60px] font-[400] leading-tight md:leading-[72px] lg:leading-[72px]"
           >
-            Building Legacy, Investing in
+            Building Legacy, <br></br>Investing in
             Excellence
           </h1>
         </div>

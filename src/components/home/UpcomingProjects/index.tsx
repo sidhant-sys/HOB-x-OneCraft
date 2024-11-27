@@ -15,7 +15,7 @@ const UpcomingProjects: React.FC = () => {
       </div>
 
       {/* Project Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-[20px] w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-[20px] w-full">
         {HOME_CONFIG.UPCOMING_PROJECTS.PROJECTS.map(
           (card, index) => (
             <div
@@ -31,7 +31,7 @@ const UpcomingProjects: React.FC = () => {
               />
 
               {/* Card Text */}
-              <div className="p-4 sm:p-[20px] text-[18px] sm:text-[24px] font-[400] leading-[22px] sm:leading-[28.8px] font-['Marcellus'] text-neutral1000 bg-secondary300 rounded-bl-[12px] rounded-br-[12px]">
+              <div className="p-4 sm:p-[20px] min-h-[98px] text-[18px] sm:text-[24px] font-[400] leading-[22px] sm:leading-[28.8px] font-['Marcellus'] text-neutral1000 bg-secondary300 rounded-bl-[12px] rounded-br-[12px]">
                 {card.address}
               </div>
             </div>
