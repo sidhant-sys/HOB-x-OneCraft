@@ -35,6 +35,7 @@ const AcquisitionSection: React.FC<
               src={card.imageSrc}
               width="w-full"
               height="h-[242px]"
+              className="rounded-tl-[12px] rounded-tr-[12px]"
             />
             <div className="p-[16px] md:p-[20px] bg-secondary300 min-h-[121px] rounded-bl-[12px] rounded-br-[12px] text-neutral1000">
               <span className="text-secondary800">

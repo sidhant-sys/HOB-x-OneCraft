@@ -7,7 +7,7 @@ import './style.css';
 
 const Values: FC = () => {
   return (
-    <div className="px-[16px] py-[40px] md:px-[108px] md:py-[110px] bg-primary1100 flex flex-col items-start justify-center">
+    <div className="px-[16px] py-[40px] md:px-[108px] md:py-[110px] bg-primary1100 flex flex-col items-center justify-center">
       <div className="h-[43px] flex items-center w-full gap-x-[10px] justify-center align-middle mb-[40px]">
         <HeaderSeparator />
         <div className='text-[24px] md:text-[36px] font-[400] leading-[29px] md:leading-[43.2px] text-secondary500 font-["Marcellus"]'>

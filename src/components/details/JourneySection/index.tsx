@@ -19,14 +19,16 @@ const JourneySection: React.FC<
   );
   const [inViewport, setInViewport] =
     useState(false);
-  const [isMobile, setIsMobile] =
-    useState(undefined);
+  const [isMobile, setIsMobile] = useState<
+    boolean | undefined
+  >(undefined);
   const [scrollDelta, setScrollDelta] =
     useState(0);
 
   const sectionRef = useRef(null);
 
   const { config } = props;
+  const cardsLength = config.JOURNEY_CARDS.length;
 
   useEffect(() => {
     if (inViewport) {
@@ -38,11 +40,9 @@ const JourneySection: React.FC<
     if (!isMobileChecked) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Toggle the state when the component enters/exits the viewport
-        // setInViewport(entry.isIntersecting);
         if (
           entry.isIntersecting &&
-          iteration < 3
+          iteration < cardsLength - 1
         ) {
           // Section is in view, activate the wheel event handler
           setInViewport(true);
@@ -82,7 +82,8 @@ const JourneySection: React.FC<
       const width = window.visualViewport
         ? window.visualViewport.width
         : document.documentElement.clientWidth;
-      setIsMobile(width < 768); // Update based on mobile size (768px is a common mobile breakpoint)
+      const isMobile = width < 768;
+      setIsMobile(isMobile); // Update based on mobile size (768px is a common mobile breakpoint)
     };
 
     // Initial check
@@ -107,7 +108,10 @@ const JourneySection: React.FC<
   const handleWheel = useCallback(
     (event: WheelEvent) => {
       // Only respond to downward scroll (event.deltaY > 0)
-      if (event.deltaY > 0 && iteration < 3) {
+      if (
+        event.deltaY > 0 &&
+        iteration < cardsLength - 1
+      ) {
         // Accumulate the scroll delta to track how much the user has scrolled
         setScrollDelta(
           (prevDelta) => prevDelta + event.deltaY
@@ -121,7 +125,10 @@ const JourneySection: React.FC<
       }
 
       // Prevent default scroll behavior (page scrolling)
-      if (!isMobile && iteration < 3) {
+      if (
+        !isMobile &&
+        iteration < cardsLength - 1
+      ) {
         event.preventDefault();
       }
     },
@@ -131,7 +138,10 @@ const JourneySection: React.FC<
   useEffect(() => {
     // Attach event listener to the document when section is in view
     if (!isMobile) {
-      if (inViewport && iteration < 3) {
+      if (
+        inViewport &&
+        iteration < cardsLength - 1
+      ) {
         document.addEventListener(
           'wheel',
           handleWheel,
@@ -192,7 +202,7 @@ const JourneySection: React.FC<
       className="pl-[108px] mb-[160px] journey-section"
       ref={sectionRef}
     >
-      <div className="flex flex-row align-items-center justify-center gap-[170px] min-h-[450px]">
+      <div className="flex flex-row items-center justify-center gap-[170px] min-h-[450px]">
         <div className="flex flex-col gap-[20px] h-full justify-center min-w-[550px] max-w-[550px]">
           <div className="text-[36px] leading-[43.2px] font-[400] font-['Marcellus'] text-primary1000">
             {config.title}

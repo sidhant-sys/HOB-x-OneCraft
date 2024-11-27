@@ -7,7 +7,7 @@ import { STORY_CONFIG } from '~constants/story';
 const Legacy: FC = () => {
   return (
     <div className="flex px-[16px] pt-[40px] md:px-[60px] md:pt-[60px] relative w-full h-[300px]">
-      <div className="absolute bottom-0">
+      <div className="absolute bottom-0 top-0 left-0 right-0">
         <ImageComponent
           src={images.LegacyImage}
           width="w-full"

@@ -6,18 +6,7 @@ const FadeInSection: FC<{
 }> = ({ children }) => {
   const { ref, inView } = useInView();
 
-  return (
-    <div
-      ref={ref}
-      className={`opacity-0 transform transition-all duration-100 ${
-        inView
-          ? 'opacity-100 translate-y-0'
-          : 'translate-y-5'
-      }`}
-    >
-      {children}
-    </div>
-  );
+  return <div>{children}</div>;
 };
 
 export default FadeInSection;

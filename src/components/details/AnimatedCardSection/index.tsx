@@ -1,8 +1,4 @@
-import React, {
-  useCallback,
-  useEffect,
-  useState
-} from 'react';
+import React from 'react';
 import { IAnimatedCardComponentProps } from './type';
 import Card from './Card';
 
@@ -10,21 +6,31 @@ const AnimatedCardSection: React.FC<
   IAnimatedCardComponentProps
 > = (props) => {
   const eachCardWithPlusGapSize = -378;
-  const tiltAngles = [
-    [0, 0, 0, 0],
-    [-4, 0, 0, 0],
-    [-8, -4, 0, 0],
-    [-12, -8, -4, 0]
-  ];
+
+  const generateTiltAngles = (n: number) => {
+    const result = [];
+
+    for (let i = 0; i < n; i++) {
+      const row = new Array(4).fill(0);
+      for (let j = 0; j <= i; j++) {
+        row[j] = -4 * (i - j); // Decrement values by -4 in steps
+      }
+      result.push(row);
+    }
+
+    return result;
+  };
 
   const {
     config,
-    inViewport,
     className,
     iteration,
     startAnimation
   } = props;
   const totalCards = config.length;
+
+  const tiltAngles =
+    generateTiltAngles(totalCards);
 
   const cards = Array.from(
     { length: totalCards },
@@ -35,21 +41,6 @@ const AnimatedCardSection: React.FC<
       imgSrc: config[index].imgSrc
     })
   );
-
-  // useEffect(() => {
-  //   let timer: number;
-  //   if (
-  //     iteration < 3 &&
-  //     inViewport &&
-  //     startAnimation
-  //   ) {
-  //     timer = setTimeout(
-  //       () => setIteration(iteration + 1),
-  //       1000
-  //     );
-  //   }
-  //   return () => clearTimeout(timer);
-  // }, [iteration, inViewport, startAnimation]);
 
   const getTransformClass = (
     index: number,
@@ -80,6 +71,11 @@ const AnimatedCardSection: React.FC<
             getTransformClass(index, 1) +
             eachCardWithPlusGapSize;
         }
+        if (index === 4) {
+          translateValue =
+            getTransformClass(index, 1) +
+            eachCardWithPlusGapSize;
+        }
         return index !== 0 ? translateValue : 0;
       case 3:
         if (index === 1) {
@@ -99,8 +95,37 @@ const AnimatedCardSection: React.FC<
             getTransformClass(index, 2) +
             eachCardWithPlusGapSize;
         }
+        if (index === 4) {
+          translateValue =
+            getTransformClass(index, 2) +
+            eachCardWithPlusGapSize;
+        }
         return index !== 0 ? translateValue : 0;
-
+      case 4:
+        if (index === 1) {
+          translateValue = getTransformClass(
+            index,
+            3
+          );
+        }
+        if (index === 2) {
+          translateValue = getTransformClass(
+            index,
+            3
+          );
+        }
+        if (index === 3) {
+          translateValue = getTransformClass(
+            index,
+            3
+          );
+        }
+        if (index === 4) {
+          translateValue =
+            getTransformClass(index, 3) +
+            eachCardWithPlusGapSize;
+        }
+        return index !== 0 ? translateValue : 0;
       default:
         return 0;
     }
@@ -108,7 +133,7 @@ const AnimatedCardSection: React.FC<
 
   return (
     <div
-      className={`flex flex-row min-h-[450px] overflow-hidden pl-[48px] gap-x-[18px] pb-[32px] pt-[32px] card-container ${className} `}
+      className={`flex flex-row min-h-[450px] overflow-hidden pl-[48px] gap-x-[18px] pb-[32px] pt-[32px] ${className} `}
     >
       {cards.map((card, index) => (
         <div

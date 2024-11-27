@@ -3,7 +3,7 @@ const path = require('path');
 const sharp = require('sharp');
 
 // Directory containing your images
-const imagesDir = './src/assets/images/details'; // Change this to your actual directory
+const imagesDir = './src/assets/images/home/work'; // Change this to your actual directory
 
 function convertImages(dir) {
   fs.readdir(

@@ -50,9 +50,9 @@ export const STORY_CONFIG = {
   STORY: {
     title: 'A Story of Resilience',
     leftDesc:
-      'Through transparency, mutual respect, and an unwavering focus on long-term goals, Sarbjit and his former partner navigated the complexities, emerging stronger on the other side. The experience became a lesson in resilience, integrity, and collaboration—values that continue to define our philosophy today.',
+      'Through transparency, mutual respect, and an unwavering focus on long-term goals, Sarbjit and his former shareholders navigated the complexities, emerging stronger on the other side. The experience became a lesson in resilience, integrity, and collaboration—values that continue to define our philosophy today.',
     rightDesc:
-      'The journey of House of Brar is not without its challenges. When Sarbjit Brar faced a critical decision to part ways with a business partner over irreconcilable differences, it marked a pivotal moment. The buyout process was arduous, filled with uncertainties and emotional trials.'
+      'The journey of House of Brar is not without its challenges. In the past 20 years (2004-2024), Sarbjit Brar had to make painful buyout decisions from time to time to stay committed to its vision, values and future. Each of the buyout process was arduous, filled with uncertainties and emotional trials.'
   },
   PIONEER_EXCELLENCE: {
     title: 'Pioneering Excellence',

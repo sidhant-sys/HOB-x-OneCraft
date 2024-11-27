@@ -8,12 +8,12 @@ export const PortfolioItems = {
     JOURNEY_CONFIG: {
       title: 'Our Journey so Far',
       prefixText:
-        'Brar Real Estate Development started in 2004 with its first property acquisition in Australia. Over the years, it has grown significantly. Despite the challenges of 2019 and 2020, including business restructurings, the company found resilience, wisdom, and strength, embracing inner solace during tough times.',
+        'Real Estate development started in 2004 with its first property acquisition in Australia. Over the years, it has grown significantly. Despite the pandemic challenges in 2019 and 2020 and various business restructurings, the company found resilience, wisdom, and strength, embracing inner solace during tough times.',
       highlightedText: '',
       suffixText: '',
       JOURNEY_CARDS: [
         {
-          year: '2007',
+          year: '2004',
           title: 'Official Launch',
           subtitle:
             'Formal establishment with the registration of Brar Property Developments, marking the beginning of multiple townhouse and property development projects.',
@@ -24,21 +24,28 @@ export const PortfolioItems = {
           title: 'Foundation Projects',
           subtitle:
             'Pioneered the purchase of Englobo sites, setting the foundation for future large-scale developments.',
-          imgSrc: images.RedjJourney1
+          imgSrc: images.RedjJourney2
         },
         {
-          year: '2007',
-          title: 'Official Launch',
+          year: '2013',
+          title: 'Residential Projects',
           subtitle:
-            'Formal establishment with the registration of Brar Property Developments, marking the beginning of multiple townhouse and property development projects.',
-          imgSrc: images.RedjJourney1
+            'Developed the Sinclair Heights residential subdivision after acquiring Sinclair Road.',
+          imgSrc: images.RedjJourney3
         },
         {
-          year: '2012',
-          title: 'Foundation Projects',
+          year: '2020',
+          title: 'Sinclair Heights',
           subtitle:
-            'Pioneered the purchase of Englobo sites, setting the foundation for future large-scale developments.',
-          imgSrc: images.RedjJourney1
+            'Successfully developed the Rockdale Estate in Paynes Road, Thornhill Park.',
+          imgSrc: images.RedjJourney4
+        },
+        {
+          year: '2020',
+          title: 'Murray Estate',
+          subtitle:
+            'Introduced The Village Thornhill Park Estate in Murray Road, Thornhill Park.',
+          imgSrc: images.RedjJourney5
         }
       ]
     },
@@ -46,31 +53,25 @@ export const PortfolioItems = {
       TITLE:
         'Property Acquisition and Land Development',
       SUBTITLE:
-        'This demonstrates our progressive expansion strategy. Our notable projects include luxury townhouses in Frankston, Clayton, Clayton South, and Sunshine, as well as high-end homes in Balwyn and Burwood.',
+        'Our notable projects reflect our expansion strategy, including englobo sites, childcare centers, medical centers, swimming pools, and gyms across Melbourne, Adelaide, & Perth, as well as luxury townhouses in Frankston, Clayton, Clayton South, Sunshine, & high-end homes in Balwyn & Burwood.',
       CARDS: [
         {
-          imageSrc: images.RedjAquisition,
+          imageSrc: images.RedjAcquiition1,
           highlightedText:
-            '1410 and 1460 Dohertys Rd, Mt Cottrell',
-          text: ' of Acreage lands'
+            '5 acres of Warehouse Development land',
+          text: ' on Palladium Crt in Clyde North'
         },
         {
-          imageSrc: images.RedjAquisition,
+          imageSrc: images.RedjAcquiition2,
           highlightedText:
-            '1410 and 1460 Dohertys Rd, Mt Cottrell',
-          text: ' of Acreage lands'
+            '220+ Lot Residential Subdivision',
+          text: ' in Thornhill Park (The Village Thornhill Park)'
         },
         {
-          imageSrc: images.RedjAquisition,
+          imageSrc: images.RedjAcquiition3,
           highlightedText:
-            '1410 and 1460 Dohertys Rd, Mt Cottrell',
-          text: ' of Acreage lands'
-        },
-        {
-          imageSrc: images.RedjAquisition,
-          highlightedText:
-            '1410 and 1460 Dohertys Rd, Mt Cottrell',
-          text: ' of Acreage lands'
+            '225+ Lot Residential Subdivision',
+          text: ' in Deanside (The Sinclair Heights)'
         }
       ]
     },
@@ -79,34 +80,43 @@ export const PortfolioItems = {
       SUBTITLE: `Our portfolio features a diverse range of projects, with the total value of our current holdings and developments estimated at $850 million. This reflects our ongoing growth and unwavering commitment to excellence.`,
       CARDS: [
         {
-          imageSrc: images.RedjCurrentAcquisition,
-          title: 'The Brarz OfficerBusiness Park',
+          imageSrc: images.RedjProject1,
+          title:
+            'The Brarz Officer Business Park',
           subtitle: 'Cardinia Road, Officer'
         },
         {
-          imageSrc: images.RedjCurrentAcquisition,
-          title: 'The Brarz OfficerBusiness Park',
-          subtitle: 'Cardinia Road, Officer'
+          imageSrc: images.RedjProject2,
+          title:
+            'The Cardinia North Industrial Park',
+          subtitle: 'Officer'
         },
         {
-          imageSrc: images.RedjCurrentAcquisition,
-          title: 'The Brarz OfficerBusiness Park',
-          subtitle: 'Cardinia Road, Officer'
+          imageSrc: images.RedjProject3,
+          title:
+            'The Brarz Truganina Business Park',
+          subtitle: 'Truganina'
         },
         {
-          imageSrc: images.RedjCurrentAcquisition,
-          title: 'The Brarz OfficerBusiness Park',
-          subtitle: 'Cardinia Road, Officer'
+          imageSrc: images.RedjProject4,
+          title:
+            'Summerhill Business and Industrial Park',
+          subtitle: 'Craigieburn'
         },
         {
-          imageSrc: images.RedjCurrentAcquisition,
-          title: 'The Brarz OfficerBusiness Park',
-          subtitle: 'Cardinia Road, Officer'
+          imageSrc: images.RedjProject5,
+          title: 'The Wollert Business Hub',
+          subtitle: 'Wollert'
         },
         {
-          imageSrc: images.RedjCurrentAcquisition,
-          title: 'The Brarz OfficerBusiness Park',
-          subtitle: 'Cardinia Road, Officer'
+          imageSrc: images.RedjProject6,
+          title: 'Hotel and Residential Tower',
+          subtitle: 'Melbourne City'
+        },
+        {
+          imageSrc: images.RedjProject7,
+          title: 'The Handford Employment Hub',
+          subtitle: 'Officer South'
         }
       ]
     },
@@ -115,9 +125,11 @@ export const PortfolioItems = {
       title: 'Overall Impact',
       description: {
         prefixText:
-          'From humble beginnings with 3 townhome developments to overseeing multi-million-dollar projects, our real estate portfolio is now well established across residential and commercial developments. Our journey reflects steady expansion, innovation, and a dedication to delivering superior residential and commercial properties.',
-        highlightedText: '',
-        suffixText: ''
+          'From humble beginnings with 3 townhome developments to ',
+        highlightedText:
+          'overseeing multi-million-dollar projects, our real estate portfolio is now well established across residential and commercial developments.',
+        suffixText:
+          ' Our journey reflects steady expansion, innovation, and a dedication to delivering superior residential and commercial properties.'
       }
     },
     KNOW_MORE_SECTION: [
@@ -147,29 +159,29 @@ export const PortfolioItems = {
           year: '2010',
           title: '',
           subtitle:
-            'We expanded our horizons with the acquisition of another international college, TEDI (Technical Education Devel).',
-          imgSrc: images.RedjJourney1
+            'Formal establishment with the registration of Brar Property Developments, marking the beginning of multiple townhouse and property development projects.',
+          imgSrc: images.OfieJourney1
         },
         {
           year: '2012',
-          title: 'Foundation Projects',
+          title: '',
           subtitle:
             'We brought another milestone with the registration of Malvern Institute Pty Ltd/CMI. ',
-          imgSrc: images.RedjJourney1
+          imgSrc: images.OfieJourney2
         },
         {
           year: '2010',
           title: '',
           subtitle:
-            'We expanded our horizons with the acquisition of another international college, TEDI (Technical Education Devel).',
-          imgSrc: images.RedjJourney1
+            'First Childcare Project in Lyndhurst – Paving the way for future early education centers.',
+          imgSrc: images.OfieJourney3
         },
         {
           year: '2012',
           title: 'Foundation Projects',
           subtitle:
-            'We brought another milestone with the registration of Malvern Institute Pty Ltd/CMI. ',
-          imgSrc: images.RedjJourney1
+            'Melton and Traralgon Childcare Centres – New openings, strengthening our commitment to quality early education. ',
+          imgSrc: images.OfieJourney4
         }
       ]
     },
@@ -179,10 +191,9 @@ export const PortfolioItems = {
       description: {
         prefixText:
           'These successful acquisitions marked a period of steady growth and innovation. From one education provider to ',
-        highlightedText:
-          '12 establishments spread across multiple states of Australia,',
+        highlightedText: '',
         suffixText:
-          ' our educational journey has been a testament to relentless dedication and continuous expansion.'
+          '12 establishments spread across multiple states of Australia, our educational journey has been a testament to relentless dedication and continuous expansion.'
       }
     },
     KNOW_MORE_SECTION: [
@@ -213,32 +224,16 @@ export const PortfolioItems = {
         '. These facilities have not only provided essential services but also become integral parts of the communities they serve.',
       JOURNEY_CARDS: [
         {
-          year: '2010',
-          title: '',
-          subtitle:
-            'We expanded our horizons with the acquisition of another international college, TEDI (Technical Education Devel).',
-          imgSrc: images.RedjJourney1
+          year: '2000',
+          title: 'Content required',
+          subtitle: 'Content pending',
+          imgSrc: null
         },
         {
           year: '2012',
-          title: 'Foundation Projects',
-          subtitle:
-            'We brought another milestone with the registration of Malvern Institute Pty Ltd/CMI. ',
-          imgSrc: images.RedjJourney1
-        },
-        {
-          year: '2010',
-          title: '',
-          subtitle:
-            'We expanded our horizons with the acquisition of another international college, TEDI (Technical Education Devel).',
-          imgSrc: images.RedjJourney1
-        },
-        {
-          year: '2012',
-          title: 'Foundation Projects',
-          subtitle:
-            'We brought another milestone with the registration of Malvern Institute Pty Ltd/CMI. ',
-          imgSrc: images.RedjJourney1
+          title: 'Content required',
+          subtitle: 'Content pending ',
+          imgSrc: null
         }
       ]
     },
@@ -249,24 +244,24 @@ export const PortfolioItems = {
         'Expanding beyond childcare, the integration of health facilities has been a significant aspect of our journey. Owning and developing the following has bolstered the impact on both child and elder care.',
       CARDS: [
         {
-          imageSrc: images.RedjAquisition,
+          imageSrc: images.OeihAcquisition1,
           highlightedText: '8 childcare centers',
           text: ' across key locations'
         },
         {
-          imageSrc: images.RedjAquisition,
+          imageSrc: images.OeihAcquisition2,
           highlightedText:
             '127-bed aged care facility',
           text: ' with basement and 4 levels'
         },
         {
-          imageSrc: images.RedjAquisition,
+          imageSrc: images.OeihAcquisition3,
           highlightedText:
             'Thornhill Park, Deanside, and Dorreen',
           text: ' Health Centres'
         },
         {
-          imageSrc: images.RedjAquisition,
+          imageSrc: images.OeihAcquisition4,
           highlightedText:
             '4500 sqm swimming pool and medical centre',
           text: ' at Yellow Drive'
@@ -308,7 +303,7 @@ export const PAGE_TITLE = {
 
 export const HOME_CONFIG = {
   ABOUT_US: {
-    NAME: 'ABOUT US',
+    NAME: '',
     TITLE:
       'Tradition Meets Investment Excellence',
     DESCRIPTION1:
@@ -317,7 +312,7 @@ export const HOME_CONFIG = {
       'Our philosophy reveres maximising shareholder returns through unwavering investments in real estate, education and healthcare, upholding a tradition of excellence.'
   },
   OUR_WORK: {
-    NAME: 'OUR WORK',
+    NAME: '',
     TITLE:
       'Unfolding Our Journey of Diversification, Growth, and Returns',
     DESCRIPTION:
@@ -357,27 +352,49 @@ export const HOME_CONFIG = {
     ]
   },
   UPCOMING_PROJECTS: {
-    NAME: 'OUR WORK',
-    TITLE: 'Upcoming Projects',
+    NAME: '',
+    TITLE: 'Our Work',
     PROJECTS: [
       {
-        imageSrc: images.UpcomingProject1,
+        imageSrc: images.HomeProject1,
         address:
           '54-68 La Trobe Street, Melbourne'
       },
       {
-        imageSrc: images.UpcomingProject2,
+        imageSrc: images.HomeProject2,
         address:
-          '363-379 Mt Alexander, Ascot Vale'
+          'Cardinia Central Industrial Estate'
       },
       {
-        imageSrc: images.UpcomingProject3,
-        address:
-          'Business and Industrial Site on Cardinia Road'
+        imageSrc: images.HomeProject3,
+        address: 'Business Park Officer'
       },
       {
-        imageSrc: images.UpcomingProject4,
-        address: 'Industrial Land, Craigieburn'
+        imageSrc: images.HomeProject4,
+        address:
+          'Build To Rent Project Ascot Vale'
+      },
+      {
+        imageSrc: images.HomeProject5,
+        address: 'Childcare and NDIS'
+      },
+      {
+        imageSrc: images.HomeProject6,
+        address:
+          'Business & Industrial Estate Truganina'
+      },
+      {
+        imageSrc: images.HomeProject7,
+        address:
+          'Residential & Business Park Estate Wollert'
+      },
+      {
+        imageSrc: images.HomeProject8,
+        address: 'Adelaide Developments'
+      },
+      {
+        imageSrc: images.HomeProject9,
+        address: 'Employment Precinct Officer'
       }
     ]
   },

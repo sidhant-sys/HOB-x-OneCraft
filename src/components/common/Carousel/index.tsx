@@ -55,14 +55,14 @@ const Carousel: React.FC<CarouselProps> = ({
   return (
     <div className="relative w-full h-[400px] sm:h-[700px] md:h-[400px] lg:h-[900px] overflow-hidden">
       {/* Overlay with Text */}
-      <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-10">
-        <div className="text-center text-secondary400 w-[90%] sm:w-[75%] md:w-[60%] font-['Marcellus']">
+      <div className="absolute top-0 left-0 w-full h-full flex pl-[108px] items-center z-10">
+        <div className="text-secondary400 w-[90%] sm:w-[75%] md:w-[60%] font-['Marcellus']">
           <h1
             style={{
               textShadow:
                 '2px 2px 4px rgba(0, 0, 0, 0.5)'
             }}
-            className="text-[32px] sm:text-[48px] md:text-[64px] lg:text-[80px] font-[400] leading-tight md:leading-[72px] lg:leading-[96px]"
+            className="text-[32px] sm:text-[48px] md:text-[60px] lg:text-[60px] font-[400] leading-tight md:leading-[72px] lg:leading-[72px]"
           >
             Building Legacy, Investing in
             Excellence

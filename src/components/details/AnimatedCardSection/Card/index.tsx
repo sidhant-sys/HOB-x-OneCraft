@@ -1,16 +1,9 @@
-import React, {
-  useEffect,
-  useState
-} from 'react';
+import React from 'react';
 import { ICardProps } from '../type';
 import ImageComponent from '~components/common/Image';
 
 const Card = ({
-  card,
-  index,
-  totalCards,
-  iteration,
-  startAnimation
+  card
 }: {
   card: ICardProps;
   index: number;
