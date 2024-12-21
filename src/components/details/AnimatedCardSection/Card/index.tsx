@@ -16,10 +16,10 @@ const Card = ({
   return (
     <>
       <div className="py-[30px] px-[20px] flex flex-col gap-[12px] bg-secondary300 min-h-[250px] rounded-t-[12px]">
-        <div className="w-[88px] h-[41px] py-[6px] px-[12px] bg-primary1000">
-          <div className="text-[24px] leading-[28.8px] font-[400] text-primary100 font-['Marcellus']">
+        <div className="h-[41px] ">
+          <span className="text-[24px] leading-[28.8px] font-[400] text-primary100 py-[6px] px-[12px] bg-primary1000 font-['Marcellus'] whitespace-nowrap">
             {year}
-          </div>
+          </span>
         </div>
         {title && (
           <div className="text-[24px] leading-[28.8px] font-[400] text-primary1000 font-['Marcellus']">

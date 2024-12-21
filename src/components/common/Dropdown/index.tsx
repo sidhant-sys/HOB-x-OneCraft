@@ -20,6 +20,25 @@ const Dropdown: React.FC<IDropdownProps> = ({
   const dropdownRef =
     useRef<HTMLDivElement | null>(null);
 
+  const hoverTimeout = useRef<number | null>(
+    null
+  );
+
+  const handleMouseEnter = () => {
+    if (hoverTimeout.current) {
+      clearTimeout(hoverTimeout.current);
+    }
+    setIsHovered(true);
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    hoverTimeout.current = setTimeout(() => {
+      setIsHovered(false);
+      setIsOpen(false);
+    }, 200); // Delay to allow smooth transitions
+  };
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (
@@ -57,18 +76,13 @@ const Dropdown: React.FC<IDropdownProps> = ({
       {/* Dropdown Button */}
       <div
         className="bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded cursor-pointer flex items-center"
-        onClick={() => setIsOpen(!isOpen)} // Toggle dropdown on click
-        onMouseEnter={() => {
-          setIsHovered(true);
-          setIsOpen(true);
-        }} // Track hover state
-        onMouseLeave={() => {
-          setIsHovered(false);
-        }} // Reset hover state
+        // onClick={() => setIsOpen(!isOpen)} // Toggle dropdown on click
+        onMouseEnter={handleMouseEnter} // Open dropdown on hover
+        onMouseLeave={handleMouseLeave} // Close dropdown when mouse leaves
       >
         <div
           className={`mr-2 ${
-            isHovered || isOpen || isActiveEle
+            isOpen || isActiveEle
               ? 'text-secondary900'
               : 'text-neutral1000'
           }`}
@@ -78,7 +92,7 @@ const Dropdown: React.FC<IDropdownProps> = ({
         {/* Dropdown Caret */}
         <CaretDown
           fill={
-            isHovered || isOpen || isActiveEle
+            isOpen || isActiveEle
               ? '#7B5431'
               : 'black'
           }
@@ -96,6 +110,8 @@ const Dropdown: React.FC<IDropdownProps> = ({
             maxHeight: height,
             borderRadius: '12px'
           }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <ul className="list-none p-0 m-0">
             {React.Children.map(

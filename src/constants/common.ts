@@ -470,7 +470,7 @@ export const HOME_CONFIG = {
       {
         name: 'Healthcare',
         description:
-          'Since 2014, we’ve developed 10 childcare centres and integrated health services, including an aged care facility and multiple medical centres, with a total investment of $50 million. With two new childcare projects in Adelaide, our portfolio has grown to $90 million, combining childcare and health services to support communities.',
+          'Expanding beyond medical centers, we have integrated diverse health facilities, enhancing services from youth fitness to aged care. With two new healthcare projects approved for 2024, our $90 million portfolio reflects our commitment to enriching communities and prioritizing well-being.',
         link: URL_PATHS.OEIH
       }
     ],
