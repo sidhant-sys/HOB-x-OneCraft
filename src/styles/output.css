@@ -2220,6 +2220,10 @@ body {
     height: 100%;
   }
 
+  .md\:h-\[620px\] {
+    height: 620px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2282,6 +2286,22 @@ body {
 
   .md\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .md\:w-\[618px\] {
+    width: 618px;
+  }
+
+  .md\:w-\[620px\] {
+    width: 620px;
+  }
+
+  .md\:w-\[650px\] {
+    width: 650px;
+  }
+
+  .md\:w-\[700px\] {
+    width: 700px;
   }
 
   .md\:min-w-\[290px\] {

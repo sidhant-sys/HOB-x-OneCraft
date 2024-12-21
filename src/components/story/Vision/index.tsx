@@ -32,11 +32,11 @@ const Vision: FC = () => {
       </div>
 
       {/* Image with smaller size and comes directly below title on mobile */}
-      <div className="h-[250px] w-[250px] md:h-[430px] md:w-[430px] mt-[20px] md:mt-0">
+      <div className="h-[250px] w-[250px] md:h-[430px] md:w-[620px] mt-[20px] md:mt-0">
         <img
           src={images.VisionImage}
           alt="Vision"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
       </div>
     </section>
