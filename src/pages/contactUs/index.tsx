@@ -4,6 +4,7 @@ import Button from '~components/common/Button';
 import FadeInSection from '~components/common/FadeInComponent';
 import Footer from '~components/common/Footer';
 import Navbar from '~components/common/Navbar';
+import { PAGE_TITLE } from '~constants/common';
 
 const ContactUs: FC = () => {
   const [isMobile, setIsMobile] =
@@ -25,6 +26,8 @@ const ContactUs: FC = () => {
       'resize',
       handleResize
     );
+
+    document.title = PAGE_TITLE.CONTACT_US;
 
     // Cleanup event listener on component unmount
     return () => {

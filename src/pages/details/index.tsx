@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import HeroComponent from '~components/common/HeroComponent';
 import Navbar from '~components/common/Navbar';
 import { PAGE_TITLE } from '~constants/common';
@@ -10,15 +10,26 @@ import KnowMoreSection from '~components/details/KnowMoreSection';
 import Footer from '~components/common/Footer';
 import { IDetailsPageProps } from './type';
 import FadeInSection from '~components/common/FadeInComponent';
+import { URL_PATHS } from '~constants/paths';
 
 const Details: React.FC<IDetailsPageProps> = (
   props
 ) => {
-  React.useEffect(() => {
-    document.title = PAGE_TITLE.REDJ;
-  }, []);
+  const {
+    config,
+    customStyling = false,
+    pageName
+  } = props;
 
-  const { config, customStyling = false } = props;
+  useEffect(() => {
+    let title;
+    if (pageName === URL_PATHS.REAL_ESTATE) {
+      title = PAGE_TITLE.REDJ;
+    } else if (pageName === URL_PATHS.OEIH) {
+      title = PAGE_TITLE.OEIH;
+    } else title = PAGE_TITLE.OFIE;
+    document.title = title;
+  }, [pageName]);
 
   return (
     <>

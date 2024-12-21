@@ -18,13 +18,20 @@ const router = createBrowserRouter([
   {
     path: URL_PATHS.REAL_ESTATE,
     element: (
-      <Details config={PortfolioItems.REDJ} />
+      <Details
+        config={PortfolioItems.REDJ}
+        pageName={URL_PATHS.REAL_ESTATE}
+      />
     )
   },
   {
     path: URL_PATHS.OFIE,
     element: (
-      <Details config={PortfolioItems.OFIE} />
+      <Details
+        config={PortfolioItems.OFIE}
+        pageName={URL_PATHS.OFIE}
+        customStyling={true}
+      />
     )
   },
   {
@@ -33,6 +40,7 @@ const router = createBrowserRouter([
       <Details
         config={PortfolioItems.OEIH}
         customStyling={true}
+        pageName={URL_PATHS.OEIH}
       />
     )
   },

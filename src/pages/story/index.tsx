@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FC } from 'react';
 import FadeInSection from '~components/common/FadeInComponent';
 import Footer from '~components/common/Footer';
@@ -9,8 +9,13 @@ import PioneerExcellence from '~components/story/PioneerExcellence';
 import StoryOfRessilience from '~components/story/Story';
 import Values from '~components/story/Values';
 import Vision from '~components/story/Vision';
+import { PAGE_TITLE } from '~constants/common';
 
 const Story: FC = () => {
+  useEffect(() => {
+    document.title = PAGE_TITLE.STORY;
+  }, []);
+
   return (
     <>
       <Navbar

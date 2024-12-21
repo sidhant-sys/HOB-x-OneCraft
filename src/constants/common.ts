@@ -346,7 +346,11 @@ export const PortfolioItems = {
 
 export const PAGE_TITLE = {
   HOME: 'House of Brar',
-  REDJ: 'HOB | Real Estate Development Journey'
+  REDJ: 'HOB | Real Estate Development Journey',
+  OFIE: 'HOB | Our Footprint in Early Childhood and Vocational Education',
+  OEIH: 'HOB | Our Endeavours in Healthcare',
+  STORY: 'HOB | Our Story',
+  CONTACT_US: 'HOB | Contact Us'
 };
 
 export const HOME_CONFIG = {
