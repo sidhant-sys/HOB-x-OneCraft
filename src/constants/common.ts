@@ -260,28 +260,28 @@ export const PortfolioItems = {
           title: '',
           subtitle:
             'First medical centre was approved in Thornhill Park',
-          imgSrc: images.OfieJourney1
+          imgSrc: images.OeihJourney1
         },
         {
           year: '2022',
           title: '',
           subtitle:
             'Acquired Medical Centre, Gym and a swimming school project in Doreen ',
-          imgSrc: images.OfieJourney2
+          imgSrc: images.OeihJourney2
         },
         {
           year: '2023',
           title: '',
           subtitle:
             'The residential agedcare facility approved in Deanside',
-          imgSrc: images.OfieJourney3
+          imgSrc: images.OeihJourney3
         },
         {
           year: '2024',
           title: '',
           subtitle:
             'Approval of a modern Gym with Swimming School in Deanside',
-          imgSrc: images.OfieJourney4
+          imgSrc: images.OeihJourney4
         }
       ]
     },
@@ -291,25 +291,25 @@ export const PortfolioItems = {
         'Expanding beyond medical centers, the integration of health facilities has been a significant milestone in our journey. Owning and developing various facilities has enhanced our impact on broader healthcare services, from children learning to swim, to youth gaining self-confidence, strength, physical literacy, cardiovascular fitness, and flexibility through gym activities, and to ensuring that our baby boomers are well cared for in our residential aged care facilities.',
       CARDS: [
         {
-          imageSrc: images.OfieJourney4,
+          imageSrc: images.OeihJourney4,
           highlightedText:
             'Swimming pool and Gym Deanside',
           text: ''
         },
         {
-          imageSrc: images.OfieJourney3,
+          imageSrc: images.OeihJourney3,
           highlightedText:
             '127-Bed, 5-level Residential Aged Care Facility',
           text: ''
         },
         {
-          imageSrc: images.OfieJourney1,
+          imageSrc: images.OeihJourney1,
           highlightedText:
             'Medical Centre Thornhill Park',
           text: ''
         },
         {
-          imageSrc: images.OfieJourney2,
+          imageSrc: images.OeihJourney2,
           highlightedText:
             'Medical Centre, Gym and Swimming School Doreen',
           text: ''
