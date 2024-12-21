@@ -2,6 +2,7 @@ import heroCarousel1 from './images/home/heroCarousel/1.webp';
 import heroCarousel2 from './images/home/heroCarousel/2.webp';
 import heroCarousel3 from './images/home/heroCarousel/3.webp';
 import heroCarousel4 from './images/home/heroCarousel/4.webp';
+import heroCarouselPoster from './images/home/heroCarousel/heroVideoPoster.webp';
 import PresenceMap from './images/home/presence-map.webp';
 import UpcomingProject1 from './images/home/upcoming-project1.webp';
 import UpcomingProject2 from './images/home/upcoming-project2.webp';
@@ -42,11 +43,19 @@ import OfieJourney1 from './images/details/ofie/journey/1.webp';
 import OfieJourney2 from './images/details/ofie/journey/2.webp';
 import OfieJourney3 from './images/details/ofie/journey/3.webp';
 import OfieJourney4 from './images/details/ofie/journey/4.webp';
+import OfieJourney5 from './images/details/ofie/journey/5.webp';
+import OfieAcquisition1 from './images/details/ofie/acquisition/1.webp';
+import OfieAcquisition2 from './images/details/ofie/acquisition/2.webp';
+import OfieAcquisition3 from './images/details/ofie/acquisition/3.webp';
 
 import OeihAcquisition1 from './images/details/oeih/acquisition/1.webp';
 import OeihAcquisition2 from './images/details/oeih/acquisition/2.webp';
 import OeihAcquisition3 from './images/details/oeih/acquisition/3.webp';
 import OeihAcquisition4 from './images/details/oeih/acquisition/4.webp';
+import OeihJourney1 from './images/details/oeih/journey/1.webp';
+import OeihJourney2 from './images/details/oeih/journey/2.webp';
+import OeihJourney3 from './images/details/oeih/journey/3.webp';
+import OeihJourney4 from './images/details/oeih/journey/4.webp';
 
 import HomeProject1 from './images/home/projects/1.webp';
 import HomeProject2 from './images/home/projects/2.webp';
@@ -88,6 +97,7 @@ const images = {
   heroCarousel2,
   heroCarousel3,
   heroCarousel4,
+  heroCarouselPoster,
   PresenceMap,
   UpcomingProject1,
   UpcomingProject2,
@@ -130,7 +140,15 @@ const images = {
   HomeProject6,
   HomeProject7,
   HomeProject8,
-  HomeProject9
+  HomeProject9,
+  OfieJourney5,
+  OfieAcquisition1,
+  OfieAcquisition2,
+  OfieAcquisition3,
+  OeihJourney1,
+  OeihJourney2,
+  OeihJourney3,
+  OeihJourney4
 };
 
 export default images;

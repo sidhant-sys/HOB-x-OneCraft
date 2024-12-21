@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
         {/* Right Section */}
         <div className="flex flex-col ml-auto w-full sm:w-[60%] lg:w-[40%] px-4 sm:px-[20px] lg:px-[30px] py-6 sm:py-8 lg:py-[40px] bg-primary1000 rounded-[12px] h-auto lg:h-[199px]">
           <div className="text-[18px] sm:text-[20px] lg:text-[22px] font-[400] leading-[28px] sm:leading-[30px] lg:leading-[33px] text-white mb-4 sm:mb-6 lg:mb-[30px]">
-            Join us and build a legacy with us
+            Join us to build a legacy with us.
           </div>
           <Button
             variant="secondary"

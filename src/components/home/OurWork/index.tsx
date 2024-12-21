@@ -44,7 +44,7 @@ const OurWork: React.FC = () => {
                       M
                     </span>
                   </span>
-                  <div className="text-[18px] md:text-[24px] leading-[24px] md:leading-[30.09px] font-[400] text-secondary500 text-center mb-[10px] md:mb-[20px] transition-transform duration-500 transform group-hover:translate-y-[-100px]">
+                  <div className="text-[18px] md:text-[24px] leading-[24px] md:leading-[30.09px] font-[400] text-secondary500 text-center mb-[10px] md:mb-[20px] transition-transform duration-500 transform group-hover:translate-y-[-100px] font-sherif">
                     {card.title}
                   </div>
                   <span className="text-[14px] md:text-[16px] leading-[18px] md:leading-[20.83px] font-[400] text-primary100 text-center transition-transform duration-500 transform group-hover:translate-y-[-100px]">

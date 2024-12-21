@@ -43,7 +43,7 @@ export const STORY_CONFIG = {
         letter: 'R',
         title: 'Respect',
         subtitle:
-          'We show respect through actions, building strong, collaborative relationships based on trust & understanding.'
+          'We show respect through actions, building strong, collaborative relationships based on trust and understanding.'
       }
     ]
   },

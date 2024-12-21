@@ -3,7 +3,6 @@ import Button from '~components/common/Button';
 import ImageComponent from '~components/common/Image';
 import { navigateTo } from '~utils/common';
 import { IKnowMoreSectionProps } from './type';
-import { RightArrow } from '~assets/icons';
 
 const KnowMoreSection: React.FC<
   IKnowMoreSectionProps
@@ -30,6 +29,7 @@ const KnowMoreSection: React.FC<
                   navigateTo(ite.link)
                 }
                 iconId={'RIGHT_ARROW'}
+                className="mt-auto"
               >
                 Know More
               </Button>

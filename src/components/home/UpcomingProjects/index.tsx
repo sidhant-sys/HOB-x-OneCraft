@@ -31,8 +31,10 @@ const UpcomingProjects: React.FC = () => {
               />
 
               {/* Card Text */}
-              <div className="p-4 sm:p-[20px] min-h-[98px] text-[18px] sm:text-[24px] font-[400] leading-[22px] sm:leading-[28.8px] font-['Marcellus'] text-neutral1000 bg-secondary300 rounded-bl-[12px] rounded-br-[12px]">
-                {card.address}
+              <div className="p-4 sm:p-[20px] min-h-[98px] max-h-[98px]  bg-secondary300 rounded-bl-[12px] rounded-br-[12px] overflow-hidden">
+                <div className="text-[18px] sm:text-[24px] font-[400] leading-[22px] sm:leading-[28.8px] font-['Marcellus'] text-neutral1000 line-clamp-2">
+                  {card.address}
+                </div>
               </div>
             </div>
           )

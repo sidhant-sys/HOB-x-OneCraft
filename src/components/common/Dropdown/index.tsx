@@ -58,8 +58,13 @@ const Dropdown: React.FC<IDropdownProps> = ({
       <div
         className="bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded cursor-pointer flex items-center"
         onClick={() => setIsOpen(!isOpen)} // Toggle dropdown on click
-        onMouseEnter={() => setIsHovered(true)} // Track hover state
-        onMouseLeave={() => setIsHovered(false)} // Reset hover state
+        onMouseEnter={() => {
+          setIsHovered(true);
+          setIsOpen(true);
+        }} // Track hover state
+        onMouseLeave={() => {
+          setIsHovered(false);
+        }} // Reset hover state
       >
         <div
           className={`mr-2 ${

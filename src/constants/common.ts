@@ -20,6 +20,13 @@ export const PortfolioItems = {
           imgSrc: images.RedjJourney1
         },
         {
+          year: '2011',
+          title: 'Town House Projects Delivered',
+          subtitle:
+            'Have been continously developing various townhome projects since 2004',
+          imgSrc: images.RedjJourney3
+        },
+        {
           year: '2012',
           title: 'Foundation Projects',
           subtitle:
@@ -27,24 +34,17 @@ export const PortfolioItems = {
           imgSrc: images.RedjJourney2
         },
         {
-          year: '2013',
-          title: 'Residential Projects',
-          subtitle:
-            'Developed the Sinclair Heights residential subdivision after acquiring Sinclair Road.',
-          imgSrc: images.RedjJourney3
-        },
-        {
-          year: '2020',
+          year: '2021',
           title: 'Sinclair Heights',
           subtitle:
             'Successfully developed the Rockdale Estate in Paynes Road, Thornhill Park.',
           imgSrc: images.RedjJourney4
         },
         {
-          year: '2022',
-          title: 'Murray Estate',
+          year: '2023',
+          title: 'The Village Thornhill',
           subtitle:
-            'Introduced The Village Thornhill Park Estate in Murray Road, Thornhill Park.',
+            'Successfully developed and delivered a 32-acre residential subdivision on time.',
           imgSrc: images.RedjJourney5
         }
       ]
@@ -53,7 +53,7 @@ export const PortfolioItems = {
       TITLE:
         'Property Acquisition and Land Development',
       SUBTITLE:
-        'Our notable projects reflect our expansion strategy, including englobo sites, childcare centers, medical centers, swimming pools, and gyms across Melbourne, Adelaide, & Perth, as well as luxury townhouses in Frankston, Clayton, Clayton South, Sunshine, & high-end homes in Balwyn & Burwood.',
+        'Our notable projects reflect our expansion strategy, including englobo sites, childcare centers, medical centers, swimming pools, and gyms across Melbourne, Adelaide, and Perth, as well as luxury townhouses in Frankston, Clayton, Clayton South, Sunshine, and high-end homes in Balwyn and Burwood.',
       CARDS: [
         {
           imageSrc: images.RedjAcquiition1,
@@ -82,7 +82,7 @@ export const PortfolioItems = {
         {
           imageSrc: images.RedjProject1,
           title:
-            'The Brarz Officer Business Park',
+            'The Brarz Business Park Officer South',
           subtitle: 'Cardinia Road, Officer'
         },
         {
@@ -94,7 +94,7 @@ export const PortfolioItems = {
         {
           imageSrc: images.RedjProject3,
           title:
-            'The Brarz Truganina Business Park',
+            'The Brarz Business Park Truganina',
           subtitle: 'Truganina'
         },
         {
@@ -136,17 +136,19 @@ export const PortfolioItems = {
       {
         title: 'Our Endeavors in Healthcare',
         imageSrc: images.Healthcare,
-        link: ''
+
+        link: URL_PATHS.OEIH
       },
       {
         title: 'Our Footprint in Education',
         imageSrc: images.Education,
-        link: ''
+        link: URL_PATHS.OFIE
       }
     ]
   },
   OFIE: {
-    title: 'Our Footprint in Education',
+    title:
+      'Our Footprint in Early Childhood and Vocational Education',
     imageSrc: images.Ofie,
     JOURNEY_CONFIG: {
       title: 'Our Journey so Far',
@@ -156,17 +158,17 @@ export const PortfolioItems = {
       suffixText: '',
       JOURNEY_CARDS: [
         {
-          year: '2010',
+          year: '2008',
           title: '',
           subtitle:
-            'Formal establishment with the registration of Brar Property Developments, marking the beginning of multiple townhouse and property development projects.',
+            'The formal establishment of the first vocational education project was achieved with the registration of Barkly International College in Melbourne.',
           imgSrc: images.OfieJourney1
         },
         {
-          year: '2012',
+          year: '2009-2014',
           title: '',
           subtitle:
-            'We brought another milestone with the registration of Malvern Institute Pty Ltd/CMI. ',
+            'Established over 12 vocational colleges across Melbourne, Canberra, Sydney, Adelaide, and Tasmania, offering 40+ qualifications to thousands of international and local students.',
           imgSrc: images.OfieJourney2
         },
         {
@@ -180,8 +182,40 @@ export const PortfolioItems = {
           year: '2015',
           title: '',
           subtitle:
-            'Melton and Traralgon Childcare Centres – New openings, strengthening our commitment to quality early education. ',
+            'Led by Jagbir Kaur, we established the brand "Learn Smart Early Learning Centres," now delivering early education across multiple centers under her management.',
           imgSrc: images.OfieJourney4
+        },
+        {
+          year: '2016-2024',
+          title: '',
+          subtitle:
+            'The journey of expanding our childcare portfolio continues, with two centers set to open in 2024 and plans to add two more in 2025, reflecting consistent growth.',
+          imgSrc: images.OfieJourney5
+        }
+      ]
+    },
+    ACQUISITION_CONFIG: {
+      TITLE:
+        'Land Acquisitions and Facilities Development',
+      SUBTITLE:
+        "Expanding beyond childcare, we have developed facilities that enhance early childhood education, promoting physical activity, learning, and holistic development to support children's growth and well-being.",
+      CARDS: [
+        {
+          imageSrc: images.OfieAcquisition1,
+          highlightedText:
+            'Early Childhood Education Facilities',
+          text: ''
+        },
+        {
+          imageSrc: images.OfieAcquisition2,
+          highlightedText:
+            'A Double Story Modern Childcare',
+          text: ''
+        },
+        {
+          imageSrc: images.OfieAcquisition3,
+          highlightedText: 'Childcare in Berwick',
+          text: ''
         }
       ]
     },
@@ -190,82 +224,95 @@ export const PortfolioItems = {
       title: 'Overall Impact',
       description: {
         prefixText:
-          'These successful acquisitions marked a period of steady growth and innovation. From one education provider to ',
+          'These successful acquisitions marked a period of steady growth and innovation. For a single vocational education',
         highlightedText:
-          '12 establishments spread across multiple states of Australia,',
+          ' provided to 12 establishments across multiple Australian states, ',
         suffixText:
-          ' our educational journey has been a testament to relentless dedication and continuous expansion.'
+          ' and from one early childhood education facility to many, our journey has been a testament to relentless dedication and continous expansion.'
       }
     },
     KNOW_MORE_SECTION: [
       {
         title: 'Our Endeavors in Healthcare',
         imageSrc: images.Healthcare,
-        link: ''
+        link: URL_PATHS.OEIH
       },
       {
         title:
           'Our Real Estate Development Journey',
         imageSrc: images.RealEstate,
-        link: ''
+        link: URL_PATHS.REAL_ESTATE
       }
     ]
   },
   OEIH: {
-    title:
-      'Our Endeavours in Healthcare and Childcare',
+    title: 'Our Endeavours in Healthcare',
     imageSrc: images.Oeih,
     JOURNEY_CONFIG: {
       title: 'Our Journey so Far',
       prefixText:
-        'Over the years, this passion for childcare development has resulted in a total of ',
-      highlightedText:
-        '10 centres across various locations, representing a total investment of $50 million',
-      suffixText:
-        '. These facilities have not only provided essential services but also become integral parts of the communities they serve.',
+        'Over the years, Mrs. Brar’s passion for healthcare, from working as a registered nurse in Hong Kong to serving as a Nursing Manager in Australia, has inspired the family to invest in the healthcare sector. This dedication has resulted in the successful delivery of medical centers, gymnasiums, swimming centers, and residential aged care facilities worth over $90 million.',
+      highlightedText: '',
+      suffixText: '',
       JOURNEY_CARDS: [
         {
-          year: '2000',
-          title: 'Content required',
-          subtitle: 'Content pending',
-          imgSrc: null
+          year: '2021',
+          title: '',
+          subtitle:
+            'First medical centre was approved in Thornhill Park',
+          imgSrc: images.OfieJourney1
         },
         {
-          year: '2012',
-          title: 'Content required',
-          subtitle: 'Content pending ',
-          imgSrc: null
+          year: '2022',
+          title: '',
+          subtitle:
+            'Acquired Medical Centre, Gym and a swimming school project in Doreen ',
+          imgSrc: images.OfieJourney2
+        },
+        {
+          year: '2023',
+          title: '',
+          subtitle:
+            'The residential agedcare facility approved in Deanside',
+          imgSrc: images.OfieJourney3
+        },
+        {
+          year: '2024',
+          title: '',
+          subtitle:
+            'Approval of a modern Gym with Swimming School in Deanside',
+          imgSrc: images.OfieJourney4
         }
       ]
     },
     ACQUISITION_CONFIG: {
-      TITLE:
-        'Property Acquisition and Land Development',
+      TITLE: 'Healthcare Projects',
       SUBTITLE:
-        'Expanding beyond childcare, the integration of health facilities has been a significant aspect of our journey. Owning and developing the following has bolstered the impact on both child and elder care.',
+        'Expanding beyond medical centers, the integration of health facilities has been a significant milestone in our journey. Owning and developing various facilities has enhanced our impact on broader healthcare services, from children learning to swim, to youth gaining self-confidence, strength, physical literacy, cardiovascular fitness, and flexibility through gym activities, and to ensuring that our baby boomers are well cared for in our residential aged care facilities.',
       CARDS: [
         {
-          imageSrc: images.OeihAcquisition1,
-          highlightedText: '8 childcare centers',
-          text: ' across key locations'
+          imageSrc: images.OfieJourney4,
+          highlightedText:
+            'Swimming pool and Gym Deanside',
+          text: ''
         },
         {
-          imageSrc: images.OeihAcquisition2,
+          imageSrc: images.OfieJourney3,
           highlightedText:
-            '127-bed aged care facility',
-          text: ' with basement and 4 levels'
+            '127-Bed, 5-level Residential Aged Care Facility',
+          text: ''
         },
         {
-          imageSrc: images.OeihAcquisition3,
+          imageSrc: images.OfieJourney1,
           highlightedText:
-            'Thornhill Park, Deanside, and Dorreen',
-          text: ' Health Centres'
+            'Medical Centre Thornhill Park',
+          text: ''
         },
         {
-          imageSrc: images.OeihAcquisition4,
+          imageSrc: images.OfieJourney2,
           highlightedText:
-            '4500 sqm swimming pool and medical centre',
-          text: ' at Yellow Drive'
+            'Medical Centre, Gym and Swimming School Doreen',
+          text: ''
         }
       ]
     },
@@ -274,11 +321,11 @@ export const PortfolioItems = {
       title: 'Overall Impact',
       description: {
         prefixText:
-          'With 2 additional childcare projects in Adelaide',
+          'With approval for two additional healthcare projects in 2024,',
         highlightedText:
-          ' the current holding and development portfolio stands at $90 million,',
+          ' the current holding and development portfolio exceeds $90 million,',
         suffixText:
-          ' encompassing a harmonious blend of childcare and health services aimed at enhancing the well-being of individuals across diverse communities.'
+          ' encompassing a harmonious blend of health services designed to enhance the well-being of individuals across diverse communities.'
       }
     },
     KNOW_MORE_SECTION: [
@@ -286,12 +333,12 @@ export const PortfolioItems = {
         title:
           'Our Real Estate Development Journey',
         imageSrc: images.RealEstate,
-        link: ''
+        link: URL_PATHS.REAL_ESTATE
       },
       {
         title: 'Our Footprint in Education',
         imageSrc: images.Education,
-        link: ''
+        link: URL_PATHS.OFIE
       }
     ]
   }
@@ -310,14 +357,14 @@ export const HOME_CONFIG = {
     DESCRIPTION1:
       'Founded by the enterprising Sarbjit Brar in 2004, our investment office steers towards creating a lasting impact on generations to come. At House of Brar, our commitment is to unify the family legacy and seek new avenues of growth.',
     DESCRIPTION2:
-      'Our philosophy reveres maximising shareholder returns through unwavering investments in real estate, education and healthcare, upholding a tradition of excellence.'
+      'Our philosophy is rooted in maximising shareholder returns through unwavering investments in real estate, education and healthcare, upholding a tradition of excellence.'
   },
   OUR_WORK: {
     NAME: '',
     TITLE:
       'Unfolding Our Journey of Diversification, Growth, and Returns',
     DESCRIPTION:
-      'From humble beginnings to a current worth of $850 million, House of Brar’s legacy of growth and excellence is a testament to our dedication to building a prosperous future. Over the years, we have left a lasting mark on the landscape of Australian business.',
+      'From humble beginnings, the journey to delivering projects worth $850 million has been a learning, challenging, and encouraging experience. Over the years, we have left a lasting mark on the landscape of Australian business.',
     WORK_CARD: [
       {
         imageSrc: images.Work1,
@@ -358,8 +405,7 @@ export const HOME_CONFIG = {
     PROJECTS: [
       {
         imageSrc: images.HomeProject1,
-        address:
-          '54-68 La Trobe Street, Melbourne'
+        address: 'La Trobe Street, Melbourne'
       },
       {
         imageSrc: images.HomeProject2,
@@ -376,18 +422,19 @@ export const HOME_CONFIG = {
           'Build To Rent Project Ascot Vale'
       },
       {
-        imageSrc: images.HomeProject5,
-        address: 'Childcare and NDIS'
+        imageSrc: images.HomeProject7,
+        address:
+          'Residential & Employment Estate Wollert'
       },
+
       {
         imageSrc: images.HomeProject6,
         address:
           'Business & Industrial Estate Truganina'
       },
       {
-        imageSrc: images.HomeProject7,
-        address:
-          'Residential & Business Park Estate Wollert'
+        imageSrc: images.HomeProject5,
+        address: 'Childcare and NDIS'
       },
       {
         imageSrc: images.HomeProject8,
@@ -408,19 +455,19 @@ export const HOME_CONFIG = {
         name: 'Real Estate',
         description:
           'We began our property and land development journey in 2004 with our first acquisition in Australia. Since then, our portfolio has grown to include townhouse developments in prominent locations such as Frankston, Clayton, and Balwyn. Our significant land acquisitions and transformative projects have played a vital role in shaping these communities.',
-        link: '/real-estate'
+        link: URL_PATHS.REAL_ESTATE
       },
       {
         name: 'Education',
         description:
           'In 2008, we launched a private education venture to offer international students pathways to a bright future in Australia. By 2010, we expanded by acquiring TEDI and later registered Malvern Institute Pty Ltd/CMI in 2012. These milestones fueled steady growth, resulting in twelve education providers across multiple Australian states, driven by dedication and innovation.',
-        link: '/ofie'
+        link: URL_PATHS.OFIE
       },
       {
         name: 'Healthcare',
         description:
           'Since 2014, we’ve developed 10 childcare centres and integrated health services, including an aged care facility and multiple medical centres, with a total investment of $50 million. With two new childcare projects in Adelaide, our portfolio has grown to $90 million, combining childcare and health services to support communities.',
-        link: '/oeih'
+        link: URL_PATHS.OEIH
       }
     ],
     MAP_IMAGE_SRC: images.PresenceMap
