@@ -11,4 +11,5 @@ export interface IAnimatedCardComponentProps {
   className?: string;
   iteration: number;
   startAnimation: boolean;
+  shortenCardHeight?: boolean;
 }

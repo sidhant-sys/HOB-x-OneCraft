@@ -11,4 +11,5 @@ export interface IAcquisitionSectionProps {
   customWrapperClass?: string;
   customTitleClass?: string;
   customSubtitleClass?: string;
+  shortenCardHeight?: boolean;
 }

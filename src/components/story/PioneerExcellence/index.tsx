@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Button from '~components/common/Button';
 import ImageComponent from '~components/common/Image';
 import { STORY_CONFIG } from '~constants/story';
+import { navigateTo } from '~utils/common';
 
 const PioneerExcellence: FC = () => {
   return (
@@ -54,6 +55,9 @@ const PioneerExcellence: FC = () => {
                   variant="secondary"
                   iconId={'RIGHT_ARROW'}
                   iconFillColor="#d3b471"
+                  onClick={() =>
+                    navigateTo(card.link)
+                  }
                 >
                   Know More
                 </Button>

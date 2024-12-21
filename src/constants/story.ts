@@ -56,7 +56,7 @@ export const STORY_CONFIG = {
   },
   PIONEER_EXCELLENCE: {
     title: 'Pioneering Excellence',
-    subtite:
+    subtitle:
       'As we evolve and achieve new milestones, our mission remains clear: to generate exceptional returns and opportunities for other esteemed family offices, guided by the values that built our foundation. Our diversified portfolio reflects our dedication to quality and innovation. House of Brar excels in key sectors:',
     cards: [
       {

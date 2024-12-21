@@ -25,7 +25,8 @@ const AnimatedCardSection: React.FC<
     config,
     className,
     iteration,
-    startAnimation
+    startAnimation,
+    shortenCardHeight
   } = props;
   const totalCards = config.length;
 
@@ -133,11 +134,17 @@ const AnimatedCardSection: React.FC<
 
   return (
     <div
-      className={`flex flex-row min-h-[450px] overflow-hidden pl-[48px] gap-x-[18px] pb-[32px] pt-[32px] ${className} `}
+      className={`flex flex-row ${
+        shortenCardHeight ? '' : 'min-h-[450px]'
+      } overflow-hidden pl-[48px] gap-x-[18px] pb-[32px] pt-[32px] ${className} `}
     >
       {cards.map((card, index) => (
         <div
-          className={`flex flex-col min-w-[360px] max-w-[360px] min-h-[450px] rounded-[12px] relative`}
+          className={`flex flex-col min-w-[360px] max-w-[360px] ${
+            shortenCardHeight
+              ? ''
+              : 'min-h-[450px]'
+          } rounded-[12px] relative`}
           style={{
             transform:
               index >= 1
@@ -160,6 +167,7 @@ const AnimatedCardSection: React.FC<
             totalCards={cards.length}
             iteration={iteration}
             startAnimation={startAnimation}
+            shortenCardHeight={shortenCardHeight}
           />
         </div>
       ))}

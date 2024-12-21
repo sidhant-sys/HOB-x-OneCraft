@@ -3,19 +3,25 @@ import { ICardProps } from '../type';
 import ImageComponent from '~components/common/Image';
 
 const Card = ({
-  card
+  card,
+  shortenCardHeight
 }: {
   card: ICardProps;
   index: number;
   totalCards: number;
   iteration: number;
   startAnimation: boolean;
+  shortenCardHeight?: boolean;
 }) => {
   const { year, title, subtitle, imgSrc } = card;
-
+  const heightClassName = shortenCardHeight
+    ? 'min-h-[120px]'
+    : 'min-h-[250px]';
   return (
     <>
-      <div className="py-[30px] px-[20px] flex flex-col gap-[12px] bg-secondary300 min-h-[250px] rounded-t-[12px]">
+      <div
+        className={`py-[30px] px-[20px] flex flex-col gap-[12px] bg-secondary300 ${heightClassName} rounded-t-[12px]`}
+      >
         <div className="h-[41px] ">
           <span className="text-[24px] leading-[28.8px] font-[400] text-primary100 py-[6px] px-[12px] bg-primary1000 font-['Marcellus'] whitespace-nowrap">
             {year}
@@ -26,7 +32,7 @@ const Card = ({
             {title}
           </div>
         )}
-        <div className="text-[16px] leading-[24px] font-[400] text-neutral1000">
+        <div className="text-[16px] leading-[24px] font-[400] text-neutral1000 ">
           {subtitle}
         </div>
       </div>

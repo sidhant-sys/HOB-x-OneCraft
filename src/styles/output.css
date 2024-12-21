@@ -885,6 +885,14 @@ video {
   min-height: 94px;
 }
 
+.min-h-\[120px\] {
+  min-height: 120px;
+}
+
+.min-h-\[67px\] {
+  min-height: 67px;
+}
+
 .w-5 {
   width: 1.25rem;
 }
@@ -1508,6 +1516,10 @@ video {
 
 .pt-\[40px\] {
   padding-top: 40px;
+}
+
+.pr-\[10px\] {
+  padding-right: 10px;
 }
 
 .text-center {
@@ -2429,6 +2441,10 @@ body {
 
   .md\:pt-\[60px\] {
     padding-top: 60px;
+  }
+
+  .md\:pr-\[20px\] {
+    padding-right: 20px;
   }
 
   .md\:text-left {

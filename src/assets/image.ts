@@ -65,7 +65,7 @@ import HomeProject5 from './images/home/projects/5.webp';
 import HomeProject6 from './images/home/projects/6.webp';
 import HomeProject7 from './images/home/projects/7.webp';
 import HomeProject8 from './images/home/projects/8.webp';
-import HomeProject9 from './images/home/projects/9.webp';
+// import HomeProject9 from './images/home/projects/9.webp';
 
 import LegacyImage from './images/story/legacy.webp';
 import Resillience1 from './images/story/resillience-1.webp';
@@ -140,7 +140,6 @@ const images = {
   HomeProject6,
   HomeProject7,
   HomeProject8,
-  HomeProject9,
   OfieJourney5,
   OfieAcquisition1,
   OfieAcquisition2,

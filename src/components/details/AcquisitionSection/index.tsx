@@ -9,8 +9,10 @@ const AcquisitionSection: React.FC<
     config,
     customWrapperClass = '',
     customTitleClass = '',
-    customSubtitleClass = ''
+    customSubtitleClass = '',
+    shortenCardHeight
   } = props;
+
   return (
     <section
       className={`bg-primary1100 p-[48px] md:p-[108px] flex flex-col ${customWrapperClass}`}
@@ -48,7 +50,13 @@ const AcquisitionSection: React.FC<
               className="rounded-tl-[12px] rounded-tr-[12px]"
             />
             {/* Card Text */}
-            <div className="p-[16px] md:p-[20px] bg-secondary300 min-h-[94px] rounded-bl-[12px] rounded-br-[12px] text-neutral1000">
+            <div
+              className={`p-[16px] md:p-[20px] bg-secondary300 ${
+                shortenCardHeight
+                  ? 'min-h-[67px]'
+                  : 'min-h-[94px]'
+              } rounded-bl-[12px] rounded-br-[12px] text-neutral1000`}
+            >
               <span className="text-secondary800">
                 {card.highlightedText}
               </span>{' '}

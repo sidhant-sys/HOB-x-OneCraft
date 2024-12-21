@@ -8,4 +8,5 @@ export interface IJourneySectionProps {
     suffixText: string;
     JOURNEY_CARDS: ICardProps[];
   };
+  shortenCardHeight?: boolean;
 }

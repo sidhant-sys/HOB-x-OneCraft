@@ -165,7 +165,7 @@ export const PortfolioItems = {
           imgSrc: images.OfieJourney1
         },
         {
-          year: '2009-2014',
+          year: '2009 - 2014',
           title: '',
           subtitle:
             'Established over 12 vocational colleges across Melbourne, Canberra, Sydney, Adelaide, and Tasmania, offering 40+ qualifications to thousands of international and local students.',
@@ -186,7 +186,7 @@ export const PortfolioItems = {
           imgSrc: images.OfieJourney4
         },
         {
-          year: '2016-2024',
+          year: '2016 - 2024',
           title: '',
           subtitle:
             'The journey of expanding our childcare portfolio continues, with two centers set to open in 2024 and plans to add two more in 2025, reflecting consistent growth.',

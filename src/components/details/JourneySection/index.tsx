@@ -27,7 +27,8 @@ const JourneySection: React.FC<
 
   const sectionRef = useRef(null);
 
-  const { config } = props;
+  const { config, shortenCardHeight = false } =
+    props;
   const cardsLength = config.JOURNEY_CARDS.length;
 
   useEffect(() => {
@@ -222,6 +223,7 @@ const JourneySection: React.FC<
           inViewport={inViewport}
           iteration={iteration}
           startAnimation={startAnimation}
+          shortenCardHeight={shortenCardHeight}
         />
       </div>
     </section>

@@ -28,7 +28,7 @@ const Values: FC = () => {
                 >
                   {value.letter}
                 </div>
-                <div className="flex flex-col pl-[10px] md:pl-[20px] gap-y-[10px] md:gap-y-[20px]">
+                <div className="flex flex-col pl-[10px] md:pl-[20px] pr-[10px] md:pr-[20px] gap-y-[10px] md:gap-y-[20px]">
                   <div className="text-[20px] md:text-[24px] font-[400] leading-[24px] md:leading-[28.8px] text-secondary500 font-[Marcellus]">
                     {value.title}
                   </div>

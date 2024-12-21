@@ -49,6 +49,9 @@ const Details: React.FC<IDetailsPageProps> = (
         <FadeInSection>
           <JourneySection
             config={config.JOURNEY_CONFIG}
+            shortenCardHeight={
+              pageName === URL_PATHS.OEIH
+            }
           />
         </FadeInSection>
       )}
@@ -70,6 +73,9 @@ const Details: React.FC<IDetailsPageProps> = (
               customStyling
                 ? '!text-neutral1000'
                 : ''
+            }
+            shortenCardHeight={
+              pageName === URL_PATHS.OFIE
             }
           />
         </FadeInSection>
