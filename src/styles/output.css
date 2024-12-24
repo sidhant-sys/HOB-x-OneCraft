@@ -2341,6 +2341,10 @@ body {
     flex-direction: row;
   }
 
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
   .md\:gap-\[20px\] {
     gap: 20px;
   }
@@ -2469,6 +2473,10 @@ body {
 
   .md\:text-left {
     text-align: left;
+  }
+
+  .md\:text-right {
+    text-align: right;
   }
 
   .md\:text-\[100px\] {

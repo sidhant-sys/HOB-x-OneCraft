@@ -52,7 +52,7 @@ const ContactUs: FC = () => {
                 </div>
                 <div className="flex flex-col w-full md:w-1/2 bg-secondary300 p-[20px] md:p-[50px] rounded-[12px]">
                   <form
-                    action="mailto:abc@xyz.com"
+                    action="mailto:Sarbjit.brar@gmail.com"
                     method="POST"
                     encType="text/plain"
                     className="flex flex-col gap-y-[20px]"
@@ -182,7 +182,7 @@ const ContactUs: FC = () => {
                   </div>
                 </div>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.272717149801!2d144.9570953!3d-37.8305009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad667a5e34e994b%3A0x63010c99d7caf548!2sCreativeCubes.Co%20-%20South%20Melbourne!5e0!3m2!1sen!2sin!4v1734956218792!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.90089868012!2d77.46612713338561!3d12.953945614765908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1730023660454!5m2!1sen!2sin"
                   width="100%"
                   height="248"
                   style={{ border: 0 }}
@@ -197,7 +197,7 @@ const ContactUs: FC = () => {
           {/* Right Column */}
           <div className="flex flex-col w-full md:w-1/2 bg-secondary300 p-[20px] md:p-[50px] rounded-[12px]">
             <form
-              action="mailto:abc@xyz.com"
+              action="mailto:Sarbjit.brar@gmail.com"
               method="POST"
               encType="text/plain"
               className="flex flex-col gap-y-[20px]"
